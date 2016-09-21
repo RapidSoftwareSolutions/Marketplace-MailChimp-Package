@@ -1,0 +1,47 @@
+const _       = require('../lib/functions')
+const request = require('request');
+
+module.exports = (req, res) => {
+
+	// rpt bug
+	req.body.args = _.clearArgs(req.body.args);
+
+	let { 
+		apiKey, 
+		name,
+		to="to" } = req.body.args;
+
+	let r  = {
+        callback     : "",
+        contextWrites: {}
+    };
+
+	if(!apiKey || !name) {
+		_.echoBadEnd(r, to, res);
+		return;
+	}
+
+	//get datacenter
+	let dcarr = apiKey.split('-'),
+		dc    = dcarr[dcarr.length-1] + '.';
+
+	let options = {
+		method: 'POST',
+		url: `https://${dc}api.mailchimp.com/3.0/campaign-folders`, 
+		body: `{"name":"${name}"}`
+	}
+
+	return request(options, (err, response, body) => {
+		console.log(err, body)
+		if(!err && response.statusCode == 200) {
+    		r.contextWrites[to] = JSON.stringify(body);
+            r.callback = 'success'; 
+        } else {
+            r.contextWrites[to] = JSON.stringify(err || body);
+            r.callback = 'error';
+        }
+
+        res.status(200).send(r);
+	})
+	.auth(null, null, true, apiKey);
+}

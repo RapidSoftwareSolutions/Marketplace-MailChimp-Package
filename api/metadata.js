@@ -40,6 +40,329 @@ module.exports.do = function(req, res){
                     'info': 'Success'
                 }
             ]
+        }, {
+            "name":"getAutomationInWorkflow",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "workflowId",
+                    type: "String",
+                    info: "The unique id for the Automation workflow.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        }, {
+            "name":"pauseAllEmails",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "workflowId",
+                    type: "String",
+                    info: "The unique id for the Automation workflow.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        }, {
+            "name":"startAllEmails",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "workflowId",
+                    type: "String",
+                    info: "The unique id for the Automation workflow.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        }, {
+            "name":"getAutomatedEmailsList",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "workflowId",
+                    type: "String",
+                    info: "The unique id for the Automation workflow.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        }, {
+            "name":"getWorkflowEmail",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "workflowId",
+                    type: "String",
+                    info: "The unique id for the Automation workflow.",
+                },
+                {
+                    name: "emailId",
+                    type: "String",
+                    info: "The unique id for the Automation workflow email.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        }, {
+            "name":"pauseAutomatedEmail",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "workflowId",
+                    type: "String",
+                    info: "The unique id for the Automation workflow.",
+                },
+                {
+                    name: "emailId",
+                    type: "String",
+                    info: "The unique id for the Automation workflow email.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        }, {
+            "name":"startAutomatedEmail",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "workflowId",
+                    type: "String",
+                    info: "The unique id for the Automation workflow.",
+                },
+                {
+                    name: "emailId",
+                    type: "String",
+                    info: "The unique id for the Automation workflow email.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        }, {
+            "name":"addWorkflowEmailSubscriber",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "workflowId",
+                    type: "String",
+                    info: "The unique id for the Automation workflow.",
+                },
+                {
+                    name: "emailId",
+                    type: "String",
+                    info: "The unique id for the Automation workflow email.",
+                },
+                {
+                    name: "emailAddress",
+                    type: "String",
+                    info: "The unique id for the Automation workflow email.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        }, {
+            "name":"getEmailSubscriber",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "workflowId",
+                    type: "String",
+                    info: "The unique id for the Automation workflow.",
+                },
+                {
+                    name: "emailId",
+                    type: "String",
+                    info: "The unique id for the Automation workflow email.",
+                },
+                {
+                    name: "emailAddress",
+                    type: "String",
+                    info: "The unique id for the Automation workflow email.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        }, {
+            "name":"removeWorkflowSubscriber",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "workflowId",
+                    type: "String",
+                    info: "The unique id for the Automation workflow.",
+                },
+                {
+                    name: "emailAddress",
+                    type: "String",
+                    info: "The list member’s email address.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        }, {
+            "name":"createCampaignFolder",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "name",
+                    type: "String",
+                    info: "Name to associate with the folder.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        }, {
+            "name":"getCampaignFolders",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
         }]
     })
 };

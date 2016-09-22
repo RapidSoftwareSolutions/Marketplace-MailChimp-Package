@@ -7,7 +7,8 @@ module.exports = (req, res) => {
 	req.body.args = _.clearArgs(req.body.args);
 
 	let { 
-		apiKey, 
+		apiKey,
+		folderId, 
 		to="to" } = req.body.args;
 
 	let r  = {
@@ -15,7 +16,7 @@ module.exports = (req, res) => {
         contextWrites: {}
     };
 
-	if(!apiKey) {
+	if(!apiKey || !folderId) {
 		_.echoBadEnd(r, to, res);
 		return;
 	}
@@ -25,7 +26,7 @@ module.exports = (req, res) => {
 		dc    = dcarr[dcarr.length-1] + '.';
 
 	let options = {
-		url: `https://${dc}api.mailchimp.com/3.0/campaign-folders`, 
+		url: `https://${dc}api.mailchimp.com/3.0/campaign-folders/${folderId}`, 
 		qs: { 
 			apikey: apiKey,
 		},

@@ -1,0 +1,194 @@
+const _       = require('../lib/functions')
+const request = require('request');
+
+module.exports = (req, res) => {
+
+	// rpt bug
+	req.body.args = _.clearArgs(req.body.args);
+
+	let { 
+		apiKey,
+		recipientsListId,
+		subjectLine,
+		title,
+		fromName,
+		replyTo,
+		useConversation, 
+		toName, 
+		folderId, 
+		authenticate, 
+		autoFooter, 
+		inlineCss, 
+		autoTweet, 
+		autoFbPost, 
+		fbComments, 
+		variateSettingsWinnerCriteria,
+		variateSettingsWaitTime, 
+		variateSettingsTestSize, 
+		variateSettingssubjectLines, 
+		variateSettingsSendTimes, 
+		variateSettingsFromNames, 
+		variateSettingsReplyToAddresses, 
+		trackingOpens, 
+		trackingHtmlClicks, 
+		trackingTextClicks, 
+		trackingGoalTracking, 
+		trackingEcomm360, 
+		trackingGoogleAnalytics, 
+		trackingClicktale, 
+		trackingSalesforceCampaign, 
+		trackingSalesforceNotes, 
+		trackingHighriseCampaign, 
+		trackingHighriseNotes, 
+		trackingCapsuleNotes, 
+		rssOptsFeedUrl,
+		rssOptsFrequency,
+		rssOptsScheduleHour, 
+		rssOptsScheduleDailySendSunday, 
+		rssOptsScheduleDailySendMonday, 
+		rssOptsScheduleDailySendTuesday, 
+		rssOptsScheduleDailySendWednesday, 
+		rssOptsScheduleDailySendThursday, 
+		rssOptsScheduleDailySendFriday, 
+		rssOptsScheduleDailySendSaturday, 
+		rssOptsScheduleWeeklySendDay, 
+		rssOptsScheduleMonthlySendDate, 
+		rssOptsConstrainRssImg, 
+		socialCardImageUrl, 
+		socialCardDescription, 
+		socialCardTitle, 
+		type,
+		to="to" } = req.body.args;
+
+	let r  = {
+        callback     : "",
+        contextWrites: {}
+    };
+
+	if(    !apiKey 
+		|| !recipientsListId 
+		|| !subjectLine
+		|| !fromName 
+		|| !replyTo 
+		// !variateSettingsWinnerCriteria 
+		|| !rssOptsFeedUrl 
+		|| !rssOptsFrequency 
+		|| !type) 
+	{
+		_.echoBadEnd(r, to, res);
+		return;
+	}
+
+	//get datacenter
+	let dcarr = apiKey.split('-'),
+		dc    = dcarr[dcarr.length-1] + '.';
+
+
+	autoFbPost                      = _.array(autoFbPost);
+	variateSettingssubjectLines     = _.array(variateSettingsSendTimes);
+	variateSettingsSendTimes        = _.array(variateSettingsSendTimes);
+	variateSettingsFromNames        = _.array(variateSettingsFromNames);
+	variateSettingsReplyToAddresses = _.array(variateSettingsReplyToAddresses);
+
+	let bodyOptions = {
+		recipients: {
+			list_id: recipientsListId,
+		},
+		settings: {
+			subject_line: subjectLine,
+			title: title,
+			from_name: fromName,
+			replyTo: replyTo,
+			use_conversation: useConversation,
+			to_name: toName,
+			folder_id: folderId,
+			authenticate: authenticate,
+			auto_footer: autoFooter,
+			inline_css: inlineCss,
+			auto_tweet: autoTweet,
+			auto_fb_post: autoFbPost,
+			fb_comments: fbComments,
+		},
+		tracking: {
+			opens: trackingOpens,
+			html_clicks: trackingHtmlClicks,
+			text_clicks: trackingTextClicks,
+			goal_tracking: trackingGoalTracking,
+			ecomm360: trackingEcomm360,
+			google_analytics: trackingGoogleAnalytics,
+			clicktale: trackingClicktale,
+			salesforce: {
+				campaign: trackingSalesforceCampaign,
+				notes: trackingSalesforceNotes,
+			},
+			highrise: {
+				notes: trackingHighriseNotes,
+				campaign:trackingHighriseCampaign,
+			} ,
+			capsule: {
+				notes: trackingCapsuleNotes,
+			}
+		},
+		rss_opts: {
+			feed_url: rssOptsFeedUrl,
+			frequency: rssOptsFrequency,
+			hour: rssOptsScheduleHour,
+			schedule: {
+				daily_send: {
+					sunday: rssOptsScheduleDailySendSunday,
+					monday:rssOptsScheduleDailySendMonday,
+					tuesday: rssOptsScheduleDailySendTuesday,
+					wednesday: rssOptsScheduleDailySendWednesday,
+					thursday: rssOptsScheduleDailySendThursday,
+					friday: rssOptsScheduleDailySendFriday,
+					saturday: rssOptsScheduleDailySendSaturday,
+				},
+				weekly_send_day: rssOptsScheduleWeeklySendDay,
+				monthly_send_date: rssOptsScheduleMonthlySendDate,
+			},
+			constrain_img: rssOptsConstrainRssImg,
+		},
+		social_card: {
+			image_url: socialCardImageUrl,
+			description: socialCardDescription,
+			title: socialCardTitle,
+		},
+		type: type,
+	};
+
+	if(variateSettingsWinnerCriteria) {
+		bodyOptions.variate_settings = {
+			winner_criteria: variateSettingsWinnerCriteria,
+			wait_time: variateSettingsWaitTime,
+			test_size: variateSettingsTestSize,
+			subject_lines: variateSettingssubjectLines,
+			send_times: variateSettingsSendTimes,
+			from_names: variateSettingsFromNames,
+			reply_to_addresses: variateSettingsReplyToAddresses,
+		}
+	}
+
+	bodyOptions = _.clearArgs(bodyOptions);
+
+	console.log(JSON.stringify(bodyOptions));
+
+	let options = {
+		method: 'POST',
+		url: `https://${dc}api.mailchimp.com/3.0/campaigns`, 
+		body: JSON.stringify(bodyOptions)
+	}
+
+	return request(options, (err, response, body) => {
+		console.log(err, body)
+		if(!err && response.statusCode == 200) {
+    		r.contextWrites[to] = JSON.stringify(body);
+            r.callback = 'success'; 
+        } else {
+            r.contextWrites[to] = JSON.stringify(err || body);
+            r.callback = 'error';
+        }
+
+        res.status(200).send(r);
+	})
+	.auth(null, null, true, apiKey);
+}

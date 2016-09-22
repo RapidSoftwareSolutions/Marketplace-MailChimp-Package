@@ -157,11 +157,10 @@ module.exports = (req, res) => {
 	};
 
 	// Todo
-	bodyOptions = _.clearArgs(bodyOptions, true);
-	bodyOptions = _.clearArgs(bodyOptions, true);
+	bodyOptions = _.clearArgs(_.clearArgs(bodyOptions, true), true);
 
 	let options = {
-		method: 'POST',
+		method: 'PATCH',
 		url: `https://${dc}api.mailchimp.com/3.0/campaigns`, 
 		body: JSON.stringify(bodyOptions)
 	}

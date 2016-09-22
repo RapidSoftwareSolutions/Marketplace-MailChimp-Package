@@ -8,7 +8,7 @@ module.exports = (req, res) => {
 
 	let { 
 		apiKey, 
-		folderId,
+		campaignId,
 		to="to" } = req.body.args;
 
 	let r  = {
@@ -16,7 +16,7 @@ module.exports = (req, res) => {
         contextWrites: {}
     };
 
-	if(!apiKey || !folderId) {
+	if(!apiKey || !campaignId) {
 		_.echoBadEnd(r, to, res);
 		return;
 	}
@@ -26,14 +26,14 @@ module.exports = (req, res) => {
 		dc    = dcarr[dcarr.length-1] + '.';
 
 	let options = {
-		method: 'DELETE',
-		url: `https://${dc}api.mailchimp.com/3.0/campaign-folders/${folderId}`, 
+		method: 'POST',
+		url: `https://${dc}api.mailchimp.com/3.0/campaigns/${campaignId}/actions/replicate`, 
 	}
 
 	return request(options, (err, response, body) => {
 		console.log(err, body)
-		if(!err && (response.statusCode == 204 || response.statusCode == 200)) {
-    		r.contextWrites[to] = 'Success';
+		if(!err && response.statusCode == 200) {
+    		r.contextWrites[to] = JSON.stringify(body);
             r.callback = 'success'; 
         } else {
             r.contextWrites[to] = JSON.stringify(err || body);

@@ -8,6 +8,13 @@ module.exports = (req, res) => {
 
 	let { 
 		apiKey, 
+		type,
+		status,
+		beforeSendTime,
+		beforeCreateTime,
+		sinceSendTime,
+		sinceCreateTime,
+		listId,
 		folderId,
 		to="to" } = req.body.args;
 
@@ -16,24 +23,39 @@ module.exports = (req, res) => {
         contextWrites: {}
     };
 
-	if(!apiKey || !folderId) {
+	if(!apiKey) {
 		_.echoBadEnd(r, to, res);
 		return;
 	}
+
+	type   = _.array(type);
+	status = _.array(status);
+
 
 	//get datacenter
 	let dcarr = apiKey.split('-'),
 		dc    = dcarr[dcarr.length-1] + '.';
 
 	let options = {
-		method: 'DELETE',
-		url: `https://${dc}api.mailchimp.com/3.0/campaign-folders/${folderId}`, 
-	}
+		url: `https://${dc}api.mailchimp.com/3.0/campaigns`, 
+		qs: { 
+			apikey: apiKey,
+			type,
+			status,
+			before_send_time: beforeSendTime,
+			since_send_time: sinceSendTime,
+			before_create_time: beforeCreateTime,
+			since_create_time: sinceCreateTime,
+			list_id: listId,
+			folder_id: folderId
+		},
+	};
+
+	options.qs = _.clearArgs(options.qs);
 
 	return request(options, (err, response, body) => {
-		console.log(err, body)
-		if(!err && (response.statusCode == 204 || response.statusCode == 200)) {
-    		r.contextWrites[to] = 'Success';
+		if(!err && response.statusCode == 200) {
+    		r.contextWrites[to] = JSON.stringify(body);
             r.callback = 'success'; 
         } else {
             r.contextWrites[to] = JSON.stringify(err || body);
@@ -41,6 +63,5 @@ module.exports = (req, res) => {
         }
 
         res.status(200).send(r);
-	})
-	.auth(null, null, true, apiKey);
+	});
 }

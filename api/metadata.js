@@ -11,7 +11,8 @@ module.exports.do = function(req, res){
                 'apiKey',
             ]
         },
-        'blocks': [{
+        'blocks': [
+                {
             "name":"getAutomationsList",
             "args":[
                 {
@@ -1640,35 +1641,6 @@ module.exports.do = function(req, res){
                 }
             ]
         }, {
-            "name":"getConversationMessage",
-            "args":[
-                {
-                    name: "apiKey",
-                    type: "String",
-                    info: "The api key obtained from MailChimp.",
-                },
-                {
-                    name: "conversationId",
-                    type: "String",
-                    info: "The unique id for the campaign.",
-                },
-                {
-                    name: "messageId ",
-                    type: "String",
-                    info: "Whether a conversation message has been marked as read.",
-                }
-            ], 
-            'callbacks':[
-                {
-                    'name':'error',
-                    'info': 'Error'
-                },
-                {
-                    'name':'success',
-                    'info': 'Success'
-                }
-            ]
-        }, {
             "name":"getLists",
             "args":[
                 {
@@ -2563,6 +2535,1914 @@ module.exports.do = function(req, res){
                     name: "campaignId",
                     type: "String",
                     info: "The unique id for the campaign.",
+                },
+                {
+                    name: "templateId",
+                    type: "String",
+                    info: "The id of the template to use.",
+                },
+                {
+                    name: "templateSections",
+                    type: "String",
+                    info: "Content for the sections of the template. Each key should be the unique mc:edit area name from the template.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },
+        {
+            "name":"addMember",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "listId",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "emailType",
+                    type: "String",
+                    info: "Type of email this member asked to get (‘html’ or ‘text’).",
+                },
+                {
+                    name: "status",
+                    type: "String",
+                    info: "Subscriber’s current status.",
+                },
+                {
+                    name: "mergeFields",
+                    type: "String",
+                    info: "An individual merge var and value for a member.",
+                },
+                {
+                    name: "interests",
+                    type: "String",
+                    info: "The key of this object’s properties is the ID of the interest in question.",
+                },
+                {
+                    name: "language",
+                    type: "String",
+                    info: "If set/detected, the subscriber’s language.",
+                },
+                {
+                    name: "vip",
+                    type: "String",
+                    info: "VIP status for subscriber.",
+                },
+                {
+                    name: "locationLatitude",
+                    type: "String",
+                    info: "The location latitude.",
+                },
+                {
+                    name: "locationLongtitude",
+                    type: "String",
+                    info: "The location longitude.",
+                },
+                {
+                    name: "ipSignup",
+                    type: "String",
+                    info: "IP address the subscriber signed up from.",
+                },
+                {
+                    name: "timestampSignup",
+                    type: "String",
+                    info: "The date and time the subscriber signed up for the list.",
+                },
+                {
+                    name: "ipOpt",
+                    type: "String",
+                    info: "The IP address the subscriber used to confirm their opt-in status.",
+                },
+                {
+                    name: "timestampOpt",
+                    type: "String",
+                    info: "The date and time the subscribe confirmed their opt-in status.",
+                },
+                {
+                    name: "emailAddress",
+                    type: "String",
+                    info: "Email address for a subscriber.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"getMembers",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "listId",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "fields",
+                    type: "String",
+                    info: "A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.",
+                },
+                {
+                    name: "excludeFields",
+                    type: "String",
+                    info: "A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.",
+                },
+                {
+                    name: "count",
+                    type: "String",
+                    info: "The number of records to return.",
+                },
+                {
+                    name: "offset",
+                    type: "String",
+                    info: "The number of records from a collection to skip. Iterating over large collections with this parameter can be slow.",
+                },
+                {
+                    name: "emailType",
+                    type: "String",
+                    info: "The email type.",
+                },
+                {
+                    name: "status",
+                    type: "String",
+                    info: "The subscriber’s status.",
+                },
+                {
+                    name: "sinceTimestampOpt",
+                    type: "String",
+                    info: "Restrict results to subscribers who opted-in after the set timeframe.",
+                },
+                {
+                    name: "beforeTimestampOpt",
+                    type: "String",
+                    info: "Restrict results to subscribers who opted-in before the set timeframe.",
+                },
+                {
+                    name: "sinceLastChanged",
+                    type: "String",
+                    info: "Restrict results to subscribers whose information changed after the set timeframe.",
+                },
+                {
+                    name: "beforeLastChanged",
+                    type: "String",
+                    info: "Restrict results to subscribers whose information changed before the set timeframe.",
+                },
+                {
+                    name: "uniqueEmailId",
+                    type: "String",
+                    info: "A unique identifier for the email address across all MailChimp lists. This parameter can be found in any links with Ecommerce Tracking enabled.",
+                },
+                {
+                    name: "vipOnly",
+                    type: "String",
+                    info: "A filter to return only the list’s VIP members. Passing true will restrict results to VIP list members, passing false will return all list members.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"getMembers",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "listId",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "subscriberHash",
+                    type: "String",
+                    info: "The MD5 hash of the lowercase version of the list member’s email address.",
+                },
+                {
+                    name: "fields",
+                    type: "String",
+                    info: "A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.",
+                },
+                {
+                    name: "excludeFields",
+                    type: "String",
+                    info: "A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"updateMember",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "listId",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "subscriberHash",
+                    type: "String",
+                    info: "The MD5 hash of the lowercase version of the list member’s email address.",
+                },
+                {
+                    name: "emailType",
+                    type: "String",
+                    info: "Type of email this member asked to get (‘html’ or ‘text’).",
+                },
+                {
+                    name: "status",
+                    type: "String",
+                    info: "Subscriber’s current status.",
+                },
+                {
+                    name: "mergeFields",
+                    type: "String",
+                    info: "An individual merge var and value for a member.",
+                },
+                {
+                    name: "interests",
+                    type: "String",
+                    info: "The key of this object’s properties is the ID of the interest in question.",
+                },
+                {
+                    name: "language",
+                    type: "String",
+                    info: "If set/detected, the subscriber’s language.",
+                },
+                {
+                    name: "vip",
+                    type: "String",
+                    info: "VIP status for subscriber.",
+                },
+                {
+                    name: "locationLatitude",
+                    type: "String",
+                    info: "The location latitude.",
+                },
+                {
+                    name: "locationLongtitude",
+                    type: "String",
+                    info: "The location longitude.",
+                },
+                {
+                    name: "ipSignup",
+                    type: "String",
+                    info: "IP address the subscriber signed up from.",
+                },
+                {
+                    name: "timestampSignup",
+                    type: "String",
+                    info: "The date and time the subscriber signed up for the list.",
+                },
+                {
+                    name: "ipOpt",
+                    type: "String",
+                    info: "The IP address the subscriber used to confirm their opt-in status.",
+                },
+                {
+                    name: "timestamp",
+                    type: "String",
+                    info: "The date and time the subscribe confirmed their opt-in status.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"deleteMember",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "listId",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "subscriberHash",
+                    type: "String",
+                    info: "The MD5 hash of the lowercase version of the list member’s email address.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"getMemberActivity",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "listId",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "subscriberHash",
+                    type: "String",
+                    info: "The MD5 hash of the lowercase version of the list member’s email address.",
+                },
+                {
+                    name: "fields",
+                    type: "String",
+                    info: "A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.",
+                },
+                {
+                    name: "excludeFields",
+                    type: "String",
+                    info: "A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"getMemberGoals",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "listId",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "subscriberHash",
+                    type: "String",
+                    info: "The MD5 hash of the lowercase version of the list member’s email address.",
+                },
+                {
+                    name: "fields",
+                    type: "String",
+                    info: "A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.",
+                },
+                {
+                    name: "excludeFields",
+                    type: "String",
+                    info: "A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"addNote",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "listId",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "subscriberHash",
+                    type: "String",
+                    info: "The MD5 hash of the lowercase version of the list member’s email address.",
+                },
+                {
+                    name: "note",
+                    type: "String",
+                    info: "The content of the note.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"getNote",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "listId",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "subscriberHash",
+                    type: "String",
+                    info: "The MD5 hash of the lowercase version of the list member’s email address.",
+                },
+                {
+                    name: "noteId",
+                    type: "String",
+                    info: "The content of the note.",
+                },
+                {
+                    name: "fields",
+                    type: "String",
+                    info: "A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.",
+                },
+                {
+                    name: "excludeFields",
+                    type: "String",
+                    info: "A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"updateNote",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "listId",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "subscriberHash",
+                    type: "String",
+                    info: "The MD5 hash of the lowercase version of the list member’s email address.",
+                },
+                {
+                    name: "noteId",
+                    type: "String",
+                    info: "The content of the note.",
+                },
+                {
+                    name: "note",
+                    type: "String",
+                    info: "The content of the note.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"deleteNote",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "listId",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "subscriberHash",
+                    type: "String",
+                    info: "The MD5 hash of the lowercase version of the list member’s email address.",
+                },
+                {
+                    name: "noteId",
+                    type: "String",
+                    info: "The content of the note.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"addMergeField",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "listId",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "tag",
+                    type: "String",
+                    info: "The tag used in MailChimp campaigns and for the /members endpoint.",
+                },
+                {
+                    name: "name",
+                    type: "String",
+                    info: "The name of the merge field.",
+                },
+                {
+                    name: "required",
+                    type: "String",
+                    info: "The boolean value if the merge field is required.",
+                },
+                {
+                    name: "defaultValue",
+                    type: "String",
+                    info: "The default value for the merge field if null.",
+                },
+                {
+                    name: "public",
+                    type: "String",
+                    info: "Whether the merge field is displayed on the signup form.",
+                },
+                {
+                    name: "displayOrder",
+                    type: "String",
+                    info: "The order that the merge field displays on the list signup form.",
+                },
+                {
+                    name: "optionsDefaultCountry",
+                    type: "String",
+                    info: "In an address field, the default country code if none supplied.",
+                },
+                {
+                    name: "optionsPhoneFormat",
+                    type: "String",
+                    info: "In a phone field, the phone number type: US or International.",
+                },
+                {
+                    name: "optionsDateFormat",
+                    type: "String",
+                    info: "In a date or birthday field, the format of the date.",
+                },
+                {
+                    name: "optionsChoices",
+                    type: "String",
+                    info: "In a radio or dropdown non-group field, the available options for members to pick from.",
+                },
+                {
+                    name: "optionsSize",
+                    type: "String",
+                    info: "In a text field, the default length of the text field.",
+                },
+                {
+                    name: "helpText",
+                    type: "String",
+                    info: "Extra text to help the subscriber fill out the form.",
+                },
+                {
+                    name: "type",
+                    type: "String",
+                    info: "The type for the merge field.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"addSegment",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "listId",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "name",
+                    type: "String",
+                    info: "The name of the segment.",
+                },
+                {
+                    name: "staticSegment",
+                    type: "String",
+                    info: "An array of emails to be used for a static segment. Any emails provided that are not present on the list will be ignored. Passing an empty array will create a static segment without any subscribers. This field cannot be provided with the options field.",
+                },
+                {
+                    name: "optionsMatch",
+                    type: "String",
+                    info: "Match type.",
+                },
+                {
+                    name: "optionsConditionsConditionType",
+                    type: "String",
+                    info: "The type of segment, for example: date, language, Mandrill, static, and more.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"getAllSegments",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "listId",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "fields",
+                    type: "String",
+                    info: "A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.",
+                },
+                {
+                    name: "excludeFields",
+                    type: "String",
+                    info: "A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.",
+                },
+                {
+                    name: "count",
+                    type: "String",
+                    info: "The number of records to return.",
+                },
+                {
+                    name: "offset",
+                    type: "String",
+                    info: "The number of records from a collection to skip. Iterating over large collections with this parameter can be slow.",
+                },
+                {
+                    name: "type",
+                    type: "String",
+                    info: "Limit results based on segment type.",
+                },
+                {
+                    name: "sinceCreatedAt",
+                    type: "String",
+                    info: "Restrict results to segments created after the set time.",
+                },
+                {
+                    name: "beforeCreatedAt",
+                    type: "String",
+                    info: "Restrict results to segments created before the set time.",
+                },
+                {
+                    name: "sinceUpdatedAt",
+                    type: "String",
+                    info: "Restrict results to segments update after the set time.",
+                },
+                {
+                    name: "beforeUpdatedAt",
+                    type: "String",
+                    info: "Restrict results to segments update before the set time.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"getSegment",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "listId",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "segmentId",
+                    type: "String",
+                    info: "The unique id for the segment.",
+                },
+                {
+                    name: "fields",
+                    type: "String",
+                    info: "A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.",
+                },
+                {
+                    name: "excludeFields",
+                    type: "String",
+                    info: "A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"updateSegment",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "listId",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "segmentId",
+                    type: "String",
+                    info: "The unique id for the segment.",
+                },
+                {
+                    name: "name",
+                    type: "String",
+                    info: "The name of the segment.",
+                },
+                {
+                    name: "staticSegment",
+                    type: "String",
+                    info: "An array of emails to be used for a static segment. Any emails provided that are not present on the list will be ignored. Passing an empty array will create a static segment without any subscribers. This field cannot be provided with the options field.",
+                },
+                {
+                    name: "optionsMatch",
+                    type: "String",
+                    info: "Match type.",
+                },
+                {
+                    name: "optionsConditionsConditionType",
+                    type: "String",
+                    info: "An array of segment conditions.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"deleteSegment",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "listId",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "segmentId",
+                    type: "String",
+                    info: "The unique id for the segment.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"addStaticSegmentMember",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "listId",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "segmentId",
+                    type: "String",
+                    info: "The unique id for the segment.",
+                },
+                {
+                    name: "emailAddress",
+                    type: "String",
+                    info: "Email address for a subscriber.",
+                },
+                {
+                    name: "status",
+                    type: "String",
+                    info: "Subscriber’s current status.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"getAllMembers",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "listId",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "segmentId",
+                    type: "String",
+                    info: "The unique id for the segment.",
+                },
+                {
+                    name: "fields",
+                    type: "String",
+                    info: "A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.",
+                },
+                {
+                    name: "excludeFields",
+                    type: "String",
+                    info: "A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.",
+                },
+                {
+                    name: "count",
+                    type: "String",
+                    info: "The number of records to return.",
+                },
+                {
+                    name: "offset",
+                    type: "String",
+                    info: "The number of records from a collection to skip. Iterating over large collections with this parameter can be slow.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"deleteStaticSegmentMember",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "listId",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "segmentId",
+                    type: "String",
+                    info: "The unique id for the segment.",
+                },
+                {
+                    name: "subscriberHash",
+                    type: "String",
+                    info: "The MD5 hash of the lowercase version of the list member’s email address.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"addSignupForm",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "listId",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "headerImageUrl",
+                    type: "String",
+                    info: "Header image URL.",
+                },
+                {
+                    name: "headerText",
+                    type: "String",
+                    info: "Header text.",
+                },
+                {
+                    name: "headerImageWidth",
+                    type: "String",
+                    info: "Image width, in pixels.",
+                },
+                {
+                    name: "headerImageHeight",
+                    type: "String",
+                    info: "Image height, in pixels.",
+                },
+                {
+                    name: "headerImageAlt",
+                    type: "String",
+                    info: "Alt text for the image.",
+                },
+                {
+                    name: "headerImageLink",
+                    type: "String",
+                    info: "The URL that the header image will link to.",
+                },
+                {
+                    name: "headerImageAlign",
+                    type: "String",
+                    info: "Image alignment.",
+                },
+                {
+                    name: "headerImageBorderWidth",
+                    type: "String",
+                    info: "Image border width.",
+                },
+                {
+                    name: "headerImageBorderStyle",
+                    type: "String",
+                    info: "Image border style.",
+                },
+                {
+                    name: "headerImageBorderColor",
+                    type: "String",
+                    info: "Image border color.",
+                },
+                {
+                    name: "headerImageTarget",
+                    type: "String",
+                    info: "Image link target.",
+                },
+                {
+                    name: "contentsSection",
+                    type: "String",
+                    info: "The content section name.",
+                },
+                {
+                    name: "contentsValue",
+                    type: "String",
+                    info: "The content section text.",
+                },
+                {
+                    name: "styleSelector",
+                    type: "String",
+                    info: "A string that identifies the element selector.",
+                },
+                {
+                    name: "styleOptionsProperty",
+                    type: "String",
+                    info: "A string that identifies the property.",
+                },
+                {
+                    name: "styleOptionsValue",
+                    type: "String",
+                    info: "A string that identifies value of the property.",
+                },
+                {
+                    name: "signupFormUrl",
+                    type: "String",
+                    info: "Signup form URL.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"getSignupForm",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "listId",
+                    type: "String",
+                    info: " The unique id for the list.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"createTwitterLeadGenerationCard",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "listId",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "id",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "name",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "title",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "ctaText",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "privacyPolicyUrl",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "customKeyName",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "imageUrl",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "twitterCardId",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "twitterAccountId",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "listIdOpt",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "previewUrl",
+                    type: "String",
+                    info: " The unique id for the list.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"getAllTwitterLeadGenerationCards",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "listId",
+                    type: "String",
+                    info: " The unique id for the list.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"getTwitterLeadGenerationCard",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "listId",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "twitterCardId",
+                    type: "String",
+                    info: " The unique ID for the Twitter Lead Generation Card.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"createWebhook",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "listId",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "url",
+                    type: "String",
+                    info: "A valid URL for the Webhook.",
+                },
+                {
+                    name: "eventsSubscribe",
+                    type: "String",
+                    info: "Optional: Whether the webhook is triggered when a list subscriber is added.",
+                },
+                {
+                    name: "eventsUnsubscribe",
+                    type: "String",
+                    info: "Optional: Whether the webhook is triggered when a list member unsubscribes.",
+                },
+                {
+                    name: "eventsProfile",
+                    type: "String",
+                    info: "Optional: Whether the webhook is triggered when a subscriber’s profile is updated.",
+                },
+                {
+                    name: "eventsCleaned",
+                    type: "String",
+                    info: "Optional: Whether the webhook is triggered when a subscriber’s email address is cleaned from the list.",
+                },
+                {
+                    name: "eventsUpemail",
+                    type: "String",
+                    info: "Optional: Whether the webhook is triggered when a subscriber’s email address is changed.",
+                },
+                {
+                    name: "eventsCampaign",
+                    type: "String",
+                    info: "Optional: Whether the webhook is triggered when a campaign is sent or cancelled.",
+                },
+                {
+                    name: "sourcesUser",
+                    type: "String",
+                    info: "Optional: Whether the webhook is triggered by subscriber-initiated actions.",
+                },
+                {
+                    name: "sourcesAdmin",
+                    type: "String",
+                    info: "Optional: Whether the webhook is triggered by admin-initiated actions in the web interface.",
+                },
+                {
+                    name: "sourcesApi",
+                    type: "String",
+                    info: "Optional: Whether the webhook is triggered by actions initiated via the API.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"getAllWebhooks",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "listId",
+                    type: "String",
+                    info: " The unique id for the list.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"getWebhook",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "listId",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "webhookId",
+                    type: "String",
+                    info: " The unique id for the webhook.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"deleteWebhook",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "listId",
+                    type: "String",
+                    info: " The unique id for the list.",
+                },
+                {
+                    name: "webhookId",
+                    type: "String",
+                    info: " The unique id for the webhook.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"createTemplateFolder",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "name",
+                    type: "String",
+                    info: " The name of the folder.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"getAllTemplateFolders",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "fields",
+                    type: "String",
+                    info: "Optional: A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.",
+                },
+                {
+                    name: "excludeFields",
+                    type: "String",
+                    info: "Optional: A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.",
+                },
+                {
+                    name: "count",
+                    type: "String",
+                    info: "Optional: The number of records to return.",
+                },
+                {
+                    name: "offset",
+                    type: "String",
+                    info: "Optional: The number of records from a collection to skip. Iterating over large collections with this parameter can be slow.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"getTemplateFolder",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "folderId",
+                    type: "String",
+                    info: "The unique id for the template folder.",
+                },
+                {
+                    name: "fields",
+                    type: "String",
+                    info: "Optional: A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.",
+                },
+                {
+                    name: "excludeFields",
+                    type: "String",
+                    info: "Optional: A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"updateTemplateFolder",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "folderId",
+                    type: "String",
+                    info: "The unique id for the template folder.",
+                },
+                {
+                    name: "name",
+                    type: "String",
+                    info: "The name of the folder.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"deleteTemplateFolder",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "folderId",
+                    type: "String",
+                    info: "The unique id for the template folder.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"createTemplate",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "name",
+                    type: "String",
+                    info: "The name of the template.",
+                },
+                {
+                    name: "folderId",
+                    type: "String",
+                    info: "Optional: The id of the folder the template is currently in.",
+                },
+                {
+                    name: "html",
+                    type: "String",
+                    info: "The raw HTML for the template. Supported the MailChimp Template Language",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"getTemplates",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "fields",
+                    type: "String",
+                    info: "Optional: A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.",
+                },
+                {
+                    name: "excludeFields",
+                    type: "String",
+                    info: "Optional: A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.",
+                },
+                {
+                    name: "count",
+                    type: "String",
+                    info: "Optional: The number of records to return.",
+                },
+                {
+                    name: "offset",
+                    type: "String",
+                    info: "Optional: The number of records from a collection to skip. Iterating over large collections with this parameter can be slow.",
+                },
+                {
+                    name: "createdBy",
+                    type: "String",
+                    info: "Optional: The MailChimp account user who created the template.",
+                },
+                {
+                    name: "sinceCreatedAt",
+                    type: "String",
+                    info: "Optional: Restrict the response to templates created after the set date.",
+                },
+                {
+                    name: "beforeCreatedAt",
+                    type: "String",
+                    info: "Optional: Restrict the response to templates created before the set date.",
+                },
+                {
+                    name: "type",
+                    type: "String",
+                    info: "Optional: Limit results based on template type.",
+                },
+                {
+                    name: "folderId",
+                    type: "String",
+                    info: "Optional: The unique folder id.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"getTemplate",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "templateId",
+                    type: "String",
+                    info: "The unique id for the template.",
+                },
+                {
+                    name: "fields",
+                    type: "String",
+                    info: "Optional: A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.",
+                },
+                {
+                    name: "excludeFields",
+                    type: "String",
+                    info: "Optional: A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"updateTemplate",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "templateId",
+                    type: "String",
+                    info: "The unique id for the template.",
+                },
+                {
+                    name: "name",
+                    type: "String",
+                    info: "The name of the template.",
+                },
+                {
+                    name: "folderId",
+                    type: "String",
+                    info: "Optional: The id of the folder the template is currently in.",
+                },
+                {
+                    name: "html",
+                    type: "String",
+                    info: "The raw HTML for the template. Supported the MailChimp Template Language",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"deleteTemplate",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "templateId",
+                    type: "String",
+                    info: "The unique id for the template.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"getTemplateDefaultContent",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "templateId",
+                    type: "String",
+                    info: "The unique id for the template.",
+                },
+                {
+                    name: "fields",
+                    type: "String",
+                    info: "Optional: A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.",
+                },
+                {
+                    name: "excludeFields",
+                    type: "String",
+                    info: "Optional: A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"setCampaignContentHTML",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "campaignId",
+                    type: "String",
+                    info: "The unique id for the campaign.",
+                },
+                {
+                    name: "plainText",
+                    type: "String",
+                    info: "Optional: The plain-text portion of the campaign. If left unspecified, we’ll generate this automatically.",
+                },
+                {
+                    name: "html",
+                    type: "String",
+                    info: "The raw HTML for the campaign.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"setCampaignContentFromURL",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "campaignId",
+                    type: "String",
+                    info: "The unique id for the campaign.",
+                },
+                {
+                    name: "plainText",
+                    type: "String",
+                    info: "Optional: The plain-text portion of the campaign. If left unspecified, we’ll generate this automatically.",
+                },
+                {
+                    name: "url",
+                    type: "String",
+                    info: "When importing a campaign, the URL where the HTML lives.",
+                }
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },{
+            "name":"setCampaignContentFromTemplate",
+            "args":[
+                {
+                    name: "apiKey",
+                    type: "String",
+                    info: "The api key obtained from MailChimp.",
+                },
+                {
+                    name: "campaignId",
+                    type: "String",
+                    info: "The unique id for the campaign.",
+                },
+                {
+                    name: "plainText",
+                    type: "String",
+                    info: "Optional: The plain-text portion of the campaign. If left unspecified, we’ll generate this automatically.",
                 },
                 {
                     name: "templateId",

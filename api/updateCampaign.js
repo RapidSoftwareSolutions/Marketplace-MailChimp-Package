@@ -9,6 +9,7 @@ module.exports = (req, res) => {
 	let { 
 		apiKey,
 		recipientsListId,
+		campaignId,
 		subjectLine,
 		title,
 		fromName,
@@ -65,15 +66,14 @@ module.exports = (req, res) => {
         contextWrites: {}
     };
 
+    console.log(req.body.args)
+
 	if(    !apiKey 
 		|| !recipientsListId 
+		|| !campaignId
 		|| !subjectLine
 		|| !fromName 
-		|| !replyTo 
-		// !variateSettingsWinnerCriteria 
-		|| !rssOptsFeedUrl 
-		|| !rssOptsFrequency 
-		|| !type) 
+		|| !replyTo) 
 	{
 		_.echoBadEnd(r, to, res);
 		return;
@@ -129,7 +129,16 @@ module.exports = (req, res) => {
 				notes: trackingCapsuleNotes,
 			}
 		},
-		rss_opts: {
+		social_card: {
+			image_url: socialCardImageUrl,
+			description: socialCardDescription,
+			title: socialCardTitle,
+		},
+		type: type,
+	};
+
+	if(rssOptsFrequency || rssOptsFeedUrl) {
+		bodyOptions.rss_opts = {
 			feed_url: rssOptsFeedUrl,
 			frequency: rssOptsFrequency,
 			hour: rssOptsScheduleHour,
@@ -147,21 +156,15 @@ module.exports = (req, res) => {
 				monthly_send_date: rssOptsScheduleMonthlySendDate,
 			},
 			constrain_img: rssOptsConstrainRssImg,
-		},
-		social_card: {
-			image_url: socialCardImageUrl,
-			description: socialCardDescription,
-			title: socialCardTitle,
-		},
-		type: type,
-	};
-
+		}
+	}
+	
 	// Todo
 	bodyOptions = _.clearArgs(_.clearArgs(bodyOptions, true), true);
 
 	let options = {
 		method: 'PATCH',
-		url: `https://${dc}api.mailchimp.com/3.0/campaigns`, 
+		url: `https://${dc}api.mailchimp.com/3.0/campaigns/${campaignId}`, 
 		body: JSON.stringify(bodyOptions)
 	}
 

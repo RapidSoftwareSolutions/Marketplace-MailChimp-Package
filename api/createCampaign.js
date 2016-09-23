@@ -70,9 +70,6 @@ module.exports = (req, res) => {
 		|| !subjectLine
 		|| !fromName 
 		|| !replyTo 
-		// !variateSettingsWinnerCriteria 
-		|| !rssOptsFeedUrl 
-		|| !rssOptsFrequency 
 		|| !type) 
 	{
 		_.echoBadEnd(r, to, res);
@@ -98,7 +95,7 @@ module.exports = (req, res) => {
 			subject_line: subjectLine,
 			title: title,
 			from_name: fromName,
-			replyTo: replyTo,
+			reply_to: replyTo,
 			use_conversation: useConversation,
 			to_name: toName,
 			folder_id: folderId,
@@ -129,7 +126,16 @@ module.exports = (req, res) => {
 				notes: trackingCapsuleNotes,
 			}
 		},
-		rss_opts: {
+		social_card: {
+			image_url: socialCardImageUrl,
+			description: socialCardDescription,
+			title: socialCardTitle,
+		},
+		type: type,
+	};
+
+	if(rssOptsFrequency || rssOptsFeedUrl) {
+		bodyOptions.rss_opts = {
 			feed_url: rssOptsFeedUrl,
 			frequency: rssOptsFrequency,
 			hour: rssOptsScheduleHour,
@@ -147,16 +153,9 @@ module.exports = (req, res) => {
 				monthly_send_date: rssOptsScheduleMonthlySendDate,
 			},
 			constrain_img: rssOptsConstrainRssImg,
-		},
-		social_card: {
-			image_url: socialCardImageUrl,
-			description: socialCardDescription,
-			title: socialCardTitle,
-		},
-		type: type,
-	};
+		}
+	}
 
-	// Todo
 	bodyOptions = _.clearArgs(bodyOptions, true);
 	bodyOptions = _.clearArgs(bodyOptions, true);
 

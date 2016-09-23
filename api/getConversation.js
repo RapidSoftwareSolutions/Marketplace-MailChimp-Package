@@ -7,11 +7,8 @@ module.exports = (req, res) => {
 	req.body.args = _.clearArgs(req.body.args);
 
 	let { 
-		apiKey, 
-		campaignId,
-		scheduleTime,
-		timewarp,
-		batchDelivery,
+		apiKey,
+		conversationId,
 		to="to" } = req.body.args;
 
 	let r  = {
@@ -19,7 +16,7 @@ module.exports = (req, res) => {
         contextWrites: {}
     };
 
-	if(!apiKey || !scheduleTime) {
+	if(!apiKey) {
 		_.echoBadEnd(r, to, res);
 		return;
 	}
@@ -28,16 +25,11 @@ module.exports = (req, res) => {
 	let dcarr = apiKey.split('-'),
 		dc    = dcarr[dcarr.length-1] + '.';
 
-	let body = {
-		schedule_time: scheduleTime,
-		timewarp: timewarp,
-		batch_delivery: batchDelivery
-	}
-
 	let options = {
-		method: 'POST',
-		url: `https://${dc}api.mailchimp.com/3.0/campaigns/${campaignId}/actions/schedule`, 
-		body: JSON.stringify(body)
+		url: `https://${dc}api.mailchimp.com/3.0/conversations/${conversationId}`, 
+		qs: { 
+			apikey: apiKey,
+		},
 	}
 
 	return request(options, (err, response, body) => {
@@ -50,6 +42,5 @@ module.exports = (req, res) => {
         }
 
         res.status(200).send(r);
-	})
-	.auth(null, null, true, apiKey);
+	});
 }

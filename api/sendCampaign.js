@@ -9,9 +9,6 @@ module.exports = (req, res) => {
 	let { 
 		apiKey, 
 		campaignId,
-		scheduleTime,
-		timewarpe,
-		batchDelivery,
 		to="to" } = req.body.args;
 
 	let r  = {
@@ -19,7 +16,7 @@ module.exports = (req, res) => {
         contextWrites: {}
     };
 
-	if(!apiKey || !scheduleTime) {
+	if(!apiKey || !campaignId) {
 		_.echoBadEnd(r, to, res);
 		return;
 	}
@@ -28,21 +25,14 @@ module.exports = (req, res) => {
 	let dcarr = apiKey.split('-'),
 		dc    = dcarr[dcarr.length-1] + '.';
 
-	let body = {
-		schedule_time: scheduleTime,
-		timewarp: timewarp,
-		batch_delivery: batchDelivery
-	}
-
 	let options = {
 		method: 'POST',
 		url: `https://${dc}api.mailchimp.com/3.0/campaigns/${campaignId}/actions/send`, 
-		body: JSON.stringify(body);
 	}
 
 	return request(options, (err, response, body) => {
 		if(!err && response.statusCode == 204) {
-    		r.contextWrites[to] = JSON.stringify(body);
+    		r.contextWrites[to] = 'Success';
             r.callback = 'success'; 
         } else {
             r.contextWrites[to] = JSON.stringify(err || body);

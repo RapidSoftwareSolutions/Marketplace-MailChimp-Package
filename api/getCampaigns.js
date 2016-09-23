@@ -31,7 +31,6 @@ module.exports = (req, res) => {
 	type   = _.array(type);
 	status = _.array(status);
 
-
 	//get datacenter
 	let dcarr = apiKey.split('-'),
 		dc    = dcarr[dcarr.length-1] + '.';

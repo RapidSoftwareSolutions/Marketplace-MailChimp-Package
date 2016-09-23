@@ -8,8 +8,7 @@ module.exports = (req, res) => {
 
 	let { 
 		apiKey, 
-		type,
-		campaignId
+		campaignId,
 		to="to" } = req.body.args;
 
 	let r  = {
@@ -17,7 +16,7 @@ module.exports = (req, res) => {
         contextWrites: {}
     };
 
-	if(!apiKey) {
+	if(!apiKey || !campaignId) {
 		_.echoBadEnd(r, to, res);
 		return;
 	}
@@ -32,8 +31,6 @@ module.exports = (req, res) => {
 			apikey: apiKey,
 		},
 	};
-
-	options.qs = _.clearArgs(options.qs);
 
 	return request(options, (err, response, body) => {
 		if(!err && response.statusCode == 200) {

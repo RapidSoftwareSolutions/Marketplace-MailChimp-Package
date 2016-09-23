@@ -8,10 +8,11 @@ module.exports = (req, res) => {
 
 	let { 
 		apiKey, 
-		campaignId,
-		scheduleTime,
-		timewarp,
-		batchDelivery,
+		conversationId,
+		fromEmail,
+		subject,
+		message,
+		read,
 		to="to" } = req.body.args;
 
 	let r  = {
@@ -19,7 +20,7 @@ module.exports = (req, res) => {
         contextWrites: {}
     };
 
-	if(!apiKey || !scheduleTime) {
+	if(!apiKey || !conversationId || !fromEmail || !read) {
 		_.echoBadEnd(r, to, res);
 		return;
 	}
@@ -28,20 +29,24 @@ module.exports = (req, res) => {
 	let dcarr = apiKey.split('-'),
 		dc    = dcarr[dcarr.length-1] + '.';
 
+
 	let body = {
-		schedule_time: scheduleTime,
-		timewarp: timewarp,
-		batch_delivery: batchDelivery
+		from_email: fromEmail,
+		subject: subject,
+		message: message,
+		read: read
 	}
 
 	let options = {
 		method: 'POST',
-		url: `https://${dc}api.mailchimp.com/3.0/campaigns/${campaignId}/actions/schedule`, 
+		url: `https://${dc}api.mailchimp.com/3.0/conversations/${conversationId}/messages`, 
 		body: JSON.stringify(body)
-	}
+	};
 
 	return request(options, (err, response, body) => {
-		if(!err && response.statusCode == 200) {
+		console.log(err, body);
+
+		if(!err && (response.statusCode == 204 || response.statusCode == 200)) {
     		r.contextWrites[to] = JSON.stringify(body);
             r.callback = 'success'; 
         } else {

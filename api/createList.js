@@ -29,13 +29,10 @@ module.exports = (req, res) => {
 		visibility,
 		to="to" } = req.body.args;
 
-
-		console.log(req.body.args);
 	let r  = {
         callback     : "",
         contextWrites: {}
     };
-
 
 	if(    !apiKey 
 		|| !name 
@@ -97,7 +94,6 @@ module.exports = (req, res) => {
 	}
 
 	return request(options, (err, response, body) => {
-		console.log(err, body)
 		if(!err && response.statusCode == 200) {
     		r.contextWrites[to] = JSON.stringify(body);
             r.callback = 'success'; 

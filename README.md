@@ -134,7 +134,7 @@ Method description
 	"callback":"success",
 	"contextWrites":{
 		"#":{
-			"to":
+			"to": {
 			  "automations": [
 			    {
 			      "id": "b0a1c24f1a",

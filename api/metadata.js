@@ -17,7 +17,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -46,7 +46,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -70,7 +70,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -94,7 +94,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -118,7 +118,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -142,7 +142,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -171,7 +171,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -200,7 +200,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -229,7 +229,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -263,7 +263,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -297,7 +297,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -326,7 +326,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -350,7 +350,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
             ], 
@@ -369,7 +369,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -393,7 +393,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -422,7 +422,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -446,7 +446,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -720,7 +720,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -779,7 +779,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -803,7 +803,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -1077,7 +1077,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -1101,7 +1101,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -1125,7 +1125,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -1149,7 +1149,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -1173,7 +1173,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -1217,7 +1217,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -1241,7 +1241,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -1275,7 +1275,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -1299,7 +1299,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -1323,7 +1323,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -1347,7 +1347,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 }
             ], 
@@ -1366,7 +1366,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -1390,7 +1390,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -1434,7 +1434,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -1473,7 +1473,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -1502,7 +1502,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -1616,7 +1616,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -1645,7 +1645,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -1689,7 +1689,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -1713,7 +1713,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -1737,7 +1737,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -1856,7 +1856,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -1880,7 +1880,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -1909,7 +1909,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -1933,7 +1933,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -1972,7 +1972,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -2021,7 +2021,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -2060,7 +2060,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -2084,7 +2084,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -2128,7 +2128,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -2167,7 +2167,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -2211,7 +2211,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -2245,7 +2245,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -2294,7 +2294,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -2338,7 +2338,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -2392,7 +2392,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -2426,7 +2426,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -2460,7 +2460,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -2494,7 +2494,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -2528,7 +2528,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -2563,7 +2563,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -2652,7 +2652,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -2736,7 +2736,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -2775,7 +2775,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -2864,7 +2864,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -2893,7 +2893,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -2932,7 +2932,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -2971,7 +2971,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -3005,7 +3005,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -3049,7 +3049,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -3088,7 +3088,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -3122,7 +3122,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -3211,7 +3211,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -3255,7 +3255,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -3324,7 +3324,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -3363,7 +3363,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -3412,7 +3412,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -3441,7 +3441,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -3480,7 +3480,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -3529,7 +3529,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -3563,7 +3563,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -3672,7 +3672,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -3696,7 +3696,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -3775,7 +3775,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -3799,7 +3799,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -3828,7 +3828,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -3902,7 +3902,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -3926,7 +3926,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -3955,7 +3955,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -3984,7 +3984,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -4008,7 +4008,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -4047,7 +4047,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -4081,7 +4081,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -4110,7 +4110,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -4134,7 +4134,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -4168,7 +4168,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -4232,7 +4232,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -4266,7 +4266,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -4305,7 +4305,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -4329,7 +4329,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -4363,7 +4363,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -4397,7 +4397,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {
@@ -4431,7 +4431,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "apiKey",
-                    type: "String",
+                    type: "credentials",
                     info: "The api key obtained from MailChimp.",
                 },
                 {

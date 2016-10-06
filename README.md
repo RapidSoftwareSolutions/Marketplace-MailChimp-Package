@@ -118,7 +118,7 @@ Method description
 
 | Field        | Type  | Description
 |--------------|-------|----------
-| apiKey       | String| The api key obtained from MailChimp.
+| apiKey       | credentials| The api key obtained from MailChimp.
 | fields       | String| A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
 | excludeFields| String| A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
 
@@ -259,7 +259,7 @@ Method description
 
 | Field     | Type  | Description
 |-----------|-------|----------
-| apiKey    | String| The api key obtained from MailChimp.
+| apiKey    | credentials| The api key obtained from MailChimp.
 | workflowId| String| The unique id for the Automation workflow.
 
 #### Request example
@@ -286,7 +286,7 @@ Method description
 
 | Field     | Type  | Description
 |-----------|-------|----------
-| apiKey    | String| The api key obtained from MailChimp.
+| apiKey    | credentials| The api key obtained from MailChimp.
 | workflowId| String| The unique id for the Automation workflow.
 
 #### Request example
@@ -363,7 +363,7 @@ Method description
 
 | Field     | Type  | Description
 |-----------|-------|----------
-| apiKey    | String| The api key obtained from MailChimp.
+| apiKey    | credentials| The api key obtained from MailChimp.
 | workflowId| String| The unique id for the Automation workflow.
 
 #### Request example
@@ -390,7 +390,7 @@ Method description
 
 | Field     | Type  | Description
 |-----------|-------|----------
-| apiKey    | String| The api key obtained from MailChimp.
+| apiKey    | credentials| The api key obtained from MailChimp.
 | workflowId| String| The unique id for the Automation workflow.
 
 #### Request example
@@ -470,7 +470,7 @@ Method description
 
 | Field     | Type  | Description
 |-----------|-------|----------
-| apiKey    | String| The api key obtained from MailChimp.
+| apiKey    | credentials| The api key obtained from MailChimp.
 | workflowId| String| The unique id for the Automation workflow.
 | emailId   | String| The unique id for the Automation workflow email.
 
@@ -531,7 +531,7 @@ Method description
 
 | Field     | Type  | Description
 |-----------|-------|----------
-| apiKey    | String| The api key obtained from MailChimp.
+| apiKey    | credentials| The api key obtained from MailChimp.
 | workflowId| String| The unique id for the Automation workflow.
 | emailId   | String| The unique id for the Automation workflow email.
 
@@ -560,7 +560,7 @@ Method description
 
 | Field     | Type  | Description
 |-----------|-------|----------
-| apiKey    | String| The api key obtained from MailChimp.
+| apiKey    | credentials| The api key obtained from MailChimp.
 | workflowId| String| The unique id for the Automation workflow.
 | emailId   | String| The unique id for the Automation workflow email.
 
@@ -589,7 +589,7 @@ Method description
 
 | Field       | Type  | Description
 |-------------|-------|----------
-| apiKey      | String| The api key obtained from MailChimp.
+| apiKey      | credentials| The api key obtained from MailChimp.
 | workflowId  | String| The unique id for the Automation workflow.
 | emailId     | String| The unique id for the Automation workflow email.
 | emailAddress| String| The unique id for the Automation workflow email.
@@ -620,7 +620,7 @@ Method description
 
 | Field       | Type  | Description
 |-------------|-------|----------
-| apiKey      | String| The api key obtained from MailChimp.
+| apiKey      | credentials| The api key obtained from MailChimp.
 | workflowId  | String| The unique id for the Automation workflow.
 | emailId     | String| The unique id for the Automation workflow email.
 | emailAddress| String| The unique id for the Automation workflow email.
@@ -658,7 +658,7 @@ Method description
 
 | Field       | Type  | Description
 |-------------|-------|----------
-| apiKey      | String| The api key obtained from MailChimp.
+| apiKey      | credentials| The api key obtained from MailChimp.
 | workflowId  | String| The unique id for the Automation workflow.
 | emailAddress| String| The list member’s email address.
 
@@ -687,7 +687,7 @@ Method description
 
 | Field | Type  | Description
 |-------|-------|----------
-| apiKey| String| The api key obtained from MailChimp.
+| apiKey| credentials| The api key obtained from MailChimp.
 | name  | String| Name to associate with the folder.
 
 #### Request example
@@ -719,7 +719,7 @@ Method description
 
 | Field | Type  | Description
 |-------|-------|----------
-| apiKey| String| The api key obtained from MailChimp.
+| apiKey| credentials| The api key obtained from MailChimp.
 
 #### Request example
 ```json
@@ -749,7 +749,7 @@ Method description
 
 | Field   | Type  | Description
 |---------|-------|----------
-| apiKey  | String| The api key obtained from MailChimp.
+| apiKey  | credentials| The api key obtained from MailChimp.
 | folderId| String| The api key obtained from MailChimp.
 
 #### Request example
@@ -781,7 +781,7 @@ Method description
 
 | Field   | Type  | Description
 |---------|-------|----------
-| apiKey  | String| The api key obtained from MailChimp.
+| apiKey  | credentials| The api key obtained from MailChimp.
 | folderId| String| The api key obtained from MailChimp.
 | name    | String| Name to associate with the folder.
 
@@ -814,7 +814,7 @@ Method description
 
 | Field   | Type  | Description
 |---------|-------|----------
-| apiKey  | String| The api key obtained from MailChimp.
+| apiKey  | credentials| The api key obtained from MailChimp.
 | folderId| String| The api key obtained from MailChimp.
 
 #### Request example
@@ -841,7 +841,7 @@ Method description
 
 | Field                            | Type  | Description
 |----------------------------------|-------|----------
-| apiKey                           | String| The api key obtained from MailChimp.
+| apiKey                           | credentials| The api key obtained from MailChimp.
 | type                             | String| There are four types of campaigns you can create in MailChimp. A/B Split campaigns have been deprecated and variate campaigns should be used instead.
 | recipientsListId                 | String| The unique list id.
 | subjectLine                      | String| The subject line for the campaign.
@@ -990,7 +990,7 @@ Method description
 
 | Field           | Type  | Description
 |-----------------|-------|----------
-| apiKey          | String| The api key obtained from MailChimp.
+| apiKey          | credentials| The api key obtained from MailChimp.
 | type            | String| The campaign type.
 | status          | String| The status of the campaign.
 | beforeSendTime  | String| Restrict the response to campaigns sent before the set time. We recommend ISO 8601 time format: 2015-10-21T15:41:36+00:00.
@@ -1080,7 +1080,7 @@ Method description
 
 | Field     | Type  | Description
 |-----------|-------|----------
-| apiKey    | String| The api key obtained from MailChimp.
+| apiKey    | credentials| The api key obtained from MailChimp.
 | campaignId| String| The campaign id.
 
 #### Request example
@@ -1128,7 +1128,7 @@ Method description
 
 | Field                            | Type  | Description
 |----------------------------------|-------|----------
-| apiKey                           | String| The api key obtained from MailChimp.
+| apiKey                           | credentials| The api key obtained from MailChimp.
 | campaignId                       | String| The api key obtained from MailChimp.
 | recipientsListId                 | String| The unique list id.
 | subjectLine                      | String| The subject line for the campaign.
@@ -1276,7 +1276,7 @@ Method description
 
 | Field     | Type  | Description
 |-----------|-------|----------
-| apiKey    | String| The api key obtained from MailChimp.
+| apiKey    | credentials| The api key obtained from MailChimp.
 | campaignId| String| The unique id for the campaign.
 
 #### Request example
@@ -1303,7 +1303,7 @@ Method description
 
 | Field     | Type  | Description
 |-----------|-------|----------
-| apiKey    | String| The api key obtained from MailChimp.
+| apiKey    | credentials| The api key obtained from MailChimp.
 | campaignId| String| The unique id for the campaign.
 
 #### Request example
@@ -1330,7 +1330,7 @@ Method description
 
 | Field     | Type  | Description
 |-----------|-------|----------
-| apiKey    | String| The api key obtained from MailChimp.
+| apiKey    | credentials| The api key obtained from MailChimp.
 | campaignId| String| The unique id for the campaign.
 
 #### Request example
@@ -1357,7 +1357,7 @@ Method description
 
 | Field     | Type  | Description
 |-----------|-------|----------
-| apiKey    | String| The api key obtained from MailChimp.
+| apiKey    | credentials| The api key obtained from MailChimp.
 | campaignId| String| The unique id for the campaign.
 
 #### Request example
@@ -1384,7 +1384,7 @@ Method description
 
 | Field                  | Type  | Description
 |------------------------|-------|----------
-| apiKey                 | String| The api key obtained from MailChimp.
+| apiKey                 | credentials| The api key obtained from MailChimp.
 | campaignId             | String| The unique id for the campaign.
 | scheduleTime           | String| The date and time in UTC to schedule the campaign for delivery. Campaigns may only be scheduled to send on the quarter-hour (:00, :15, :30, :45).
 | timewarp               | String| Choose whether the campaign should use Timewarp when sending. Campaigns scheduled with Timewarp are localized based on the recipients’ time zones. For example, a Timewarp campaign with a schedule_time of 13:00 will be sent to each recipient at 1:00pm in their local time. Cannot be set to true for campaigns using Batch Delivery.
@@ -1419,7 +1419,7 @@ Method description
 
 | Field     | Type  | Description
 |-----------|-------|----------
-| apiKey    | String| The api key obtained from MailChimp.
+| apiKey    | credentials| The api key obtained from MailChimp.
 | campaignId| String| The unique id for the campaign.
 
 #### Request example
@@ -1446,7 +1446,7 @@ Method description
 
 | Field     | Type  | Description
 |-----------|-------|----------
-| apiKey    | String| The api key obtained from MailChimp.
+| apiKey    | credentials| The api key obtained from MailChimp.
 | campaignId| String| The unique id for the campaign.
 | testEmails| String| The unique id for the campaign.
 | sendType  | String| The unique id for the campaign.
@@ -1477,7 +1477,7 @@ Method description
 
 | Field     | Type  | Description
 |-----------|-------|----------
-| apiKey    | String| The api key obtained from MailChimp.
+| apiKey    | credentials| The api key obtained from MailChimp.
 | campaignId| String| The unique id for the campaign.
 
 #### Request example
@@ -1504,7 +1504,7 @@ Method description
 
 | Field     | Type  | Description
 |-----------|-------|----------
-| apiKey    | String| The api key obtained from MailChimp.
+| apiKey    | credentials| The api key obtained from MailChimp.
 | campaignId| String| The unique id for the campaign.
 
 #### Request example
@@ -1534,7 +1534,7 @@ Method description
 
 | Field     | Type  | Description
 |-----------|-------|----------
-| apiKey    | String| The api key obtained from MailChimp.
+| apiKey    | credentials| The api key obtained from MailChimp.
 | campaignId| String| The unique id for the campaign.
 
 #### Request example
@@ -1576,7 +1576,7 @@ Method description
 
 | Field | Type  | Description
 |-------|-------|----------
-| apiKey| String| The api key obtained from MailChimp.
+| apiKey| credentials| The api key obtained from MailChimp.
 
 #### Request example
 ```json
@@ -1626,7 +1626,7 @@ Method description
 
 | Field         | Type  | Description
 |---------------|-------|----------
-| apiKey        | String| The api key obtained from MailChimp.
+| apiKey        | credentials| The api key obtained from MailChimp.
 | conversationId| String| The unique id for the campaign.
 
 #### Request example
@@ -1669,7 +1669,7 @@ Method description
 
 | Field         | Type  | Description
 |---------------|-------|----------
-| apiKey        | String| The api key obtained from MailChimp.
+| apiKey        | credentials| The api key obtained from MailChimp.
 | conversationId| String| The unique id for the conversation.
 | fromEmail     | String| A label representing the email of the sender of this message
 | subject       | String| The subject of this message
@@ -1714,7 +1714,7 @@ Method description
 
 | Field          | Type  | Description
 |----------------|-------|----------
-| apiKey         | String| The api key obtained from MailChimp.
+| apiKey         | credentials| The api key obtained from MailChimp.
 | conversationId | String| The unique id for the campaign.
 | isRead         | String| Whether a conversation message has been marked as read.
 | beforeTimestamp| String| Restrict the response to messages created before the set time. We recommend ISO 8601 time format: 2015-10-21T15:41:36+00:00.
@@ -1759,7 +1759,7 @@ Method description
 
 | Field         | Type  | Description
 |---------------|-------|----------
-| apiKey        | String| The api key obtained from MailChimp.
+| apiKey        | credentials| The api key obtained from MailChimp.
 | conversationId| String| The unique id for the campaign.
 | messageId     | String| Whether a conversation message has been marked as read.
 
@@ -1798,7 +1798,7 @@ Method description
 
 | Field                    | Type  | Description
 |--------------------------|-------|----------
-| apiKey                   | String| The api key obtained from MailChimp.
+| apiKey                   | credentials| The api key obtained from MailChimp.
 | name                     | String| The name of the list.
 | contactCompany           | String| The company name for the list.
 | contactAddress1          | String| The street address for the list contact.
@@ -1911,7 +1911,7 @@ Method description
 
 | Field  | Type  | Description
 |--------|-------|----------
-| apiKey | String| The api key obtained from MailChimp.
+| apiKey | credentials| The api key obtained from MailChimp.
 | listId | String| The unique id for the list.
 | members| JSON  | 
 
@@ -2014,7 +2014,7 @@ Method description
 
 | Field | Type  | Description
 |-------|-------|----------
-| apiKey| String| The api key obtained from MailChimp.
+| apiKey| credentials| The api key obtained from MailChimp.
 | listId| String| The unique id for the list.
 
 #### Request example
@@ -2073,7 +2073,7 @@ Method description
 
 | Field | Type  | Description
 |-------|-------|----------
-| apiKey| String| The api key obtained from MailChimp.
+| apiKey| credentials| The api key obtained from MailChimp.
 | listId| String| The unique id for the list.
 
 #### Request example
@@ -2115,7 +2115,7 @@ Method description
 
 | Field | Type  | Description
 |-------|-------|----------
-| apiKey| String| The api key obtained from MailChimp.
+| apiKey| credentials| The api key obtained from MailChimp.
 | listId| String| The unique id for the list.
 
 #### Request example
@@ -2142,7 +2142,7 @@ Method description
 
 | Field                    | Type  | Description
 |--------------------------|-------|----------
-| apiKey                   | String| The api key obtained from MailChimp.
+| apiKey                   | credentials| The api key obtained from MailChimp.
 | listId                   | String| 
 | name                     | String| The name of the list.
 | contactCompany           | String| The company name for the list.
@@ -2257,7 +2257,7 @@ Method description
 
 | Field | Type  | Description
 |-------|-------|----------
-| apiKey| String| The api key obtained from MailChimp.
+| apiKey| credentials| The api key obtained from MailChimp.
 | listId| String| The unique id for the list.
 
 #### Request example
@@ -2292,7 +2292,6 @@ Method description
 	}
 }
 ```
-```
 
 <a name="getAbuseReport"/>
 ## MailChimp.getAbuseReport
@@ -2300,7 +2299,7 @@ Method description
 
 | Field   | Type  | Description
 |---------|-------|----------
-| apiKey  | String| The api key obtained from MailChimp.
+| apiKey  | credentials| The api key obtained from MailChimp.
 | listId  | String| The unique id for the list.
 | reportId| String| The unique id for the report.
 
@@ -2337,7 +2336,7 @@ Method description
 
 | Field | Type  | Description
 |-------|-------|----------
-| apiKey| String| The api key obtained from MailChimp.
+| apiKey| credentials| The api key obtained from MailChimp.
 | listId| String| The unique id for the list.
 
 #### Request example
@@ -2394,7 +2393,7 @@ Method description
 
 | Field       | Type  | Description
 |-------------|-------|----------
-| apiKey      | String| The api key obtained from MailChimp.
+| apiKey      | credentials| The api key obtained from MailChimp.
 | listId      | String| The unique id for the list.
 | title       | String| The text description of this category. This field appears on signup forms and is often phrased as a question.
 | displayOrder| String| The order that the categories are displayed in the list. Lower numbers display first.
@@ -2427,7 +2426,7 @@ Method description
 
 | Field        | Type  | Description
 |--------------|-------|----------
-| apiKey       | String| The api key obtained from MailChimp.
+| apiKey       | credentials| The api key obtained from MailChimp.
 | listId       | String| The unique id for the list.
 | fields       | String| A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
 | excludeFields| String| A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
@@ -2464,7 +2463,7 @@ Method description
 
 | Field             | Type  | Description
 |-------------------|-------|----------
-| apiKey            | String| The api key obtained from MailChimp.
+| apiKey            | credentials| The api key obtained from MailChimp.
 | listId            | String| The unique id for the list.
 | interestCategoryId| String| The unique id for the interest category.
 | fields            | String| A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
@@ -2497,7 +2496,7 @@ Method description
 
 | Field | Type  | Description
 |-------|-------|----------
-| apiKey| String| The api key obtained from MailChimp.
+| apiKey| credentials| The api key obtained from MailChimp.
 | listId| String| The unique id for the list.
 
 #### Request example
@@ -2548,7 +2547,7 @@ Method description
 
 | Field        | Type  | Description
 |--------------|-------|----------
-| apiKey       | String| The api key obtained from MailChimp.
+| apiKey       | credentials| The api key obtained from MailChimp.
 | listId       | String| The unique id for the list.
 | fields       | String| A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
 | excludeFields| String| A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
@@ -2583,7 +2582,7 @@ Method description
 
 | Field        | Type  | Description
 |--------------|-------|----------
-| apiKey       | String| The api key obtained from MailChimp.
+| apiKey       | credentials| The api key obtained from MailChimp.
 | listId       | String| The unique id for the list.
 | month        | String| The unique id for the list.
 | fields       | String| The unique id for the list.
@@ -2616,7 +2615,7 @@ Method description
 
 | Field             | Type  | Description
 |-------------------|-------|----------
-| apiKey            | String| The api key obtained from MailChimp.
+| apiKey            | credentials| The api key obtained from MailChimp.
 | listId            | String| The unique id for the list.
 | interestCategoryId| String| The unique id for the interest category.
 | title             | String| The text description of this category. This field appears on signup forms and is often phrased as a question.
@@ -2651,7 +2650,7 @@ Method description
 
 | Field             | Type  | Description
 |-------------------|-------|----------
-| apiKey            | String| The api key obtained from MailChimp.
+| apiKey            | credentials| The api key obtained from MailChimp.
 | listId            | String| The unique id for the list.
 | interestCategoryId| String| The unique id for the interest category.
 | name              | String| The name of the interest. This can be shown publicly on a subscription form.
@@ -2682,7 +2681,7 @@ Method description
 
 | Field             | Type  | Description
 |-------------------|-------|----------
-| apiKey            | String| The api key obtained from MailChimp.
+| apiKey            | credentials| The api key obtained from MailChimp.
 | listId            | String| The unique id for the list.
 | interestCategoryId| String| The unique id for the interest category.
 | fields            | String| A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
@@ -2719,7 +2718,7 @@ Method description
 
 | Field             | Type  | Description
 |-------------------|-------|----------
-| apiKey            | String| The api key obtained from MailChimp.
+| apiKey            | credentials| The api key obtained from MailChimp.
 | listId            | String| The unique id for the list.
 | interestCategoryId| String| The unique id for the interest category.
 | interestId        | String| The specific interest or group name.
@@ -2754,7 +2753,7 @@ Method description
 
 | Field             | Type  | Description
 |-------------------|-------|----------
-| apiKey            | String| The api key obtained from MailChimp.
+| apiKey            | credentials| The api key obtained from MailChimp.
 | listId            | String| The unique id for the list.
 | interestCategoryId| String| The unique id for the interest category.
 | interestId        | String| The specific interest or group name.
@@ -2793,7 +2792,7 @@ Method description
 
 | Field             | Type  | Description
 |-------------------|-------|----------
-| apiKey            | String| The api key obtained from MailChimp.
+| apiKey            | credentials| The api key obtained from MailChimp.
 | listId            | String| The unique id for the list.
 | interestCategoryId| String| The unique id for the interest category.
 | interestId        | String| The specific interest or group name.
@@ -2824,7 +2823,7 @@ Method description
 
 | Field     | Type  | Description
 |-----------|-------|----------
-| apiKey    | String| The api key obtained from MailChimp.
+| apiKey    | credentials| The api key obtained from MailChimp.
 | campaignId| String| The unique id for the campaign.
 | plainText | String| The plain-text portion of the campaign. If left unspecified, we’ll generate this automatically.
 | html      | String| The raw HTML for the campaign.
@@ -2858,7 +2857,7 @@ Method description
 
 | Field     | Type  | Description
 |-----------|-------|----------
-| apiKey    | String| The api key obtained from MailChimp.
+| apiKey    | credentials| The api key obtained from MailChimp.
 | campaignId| String| The unique id for the campaign.
 | plainText | String| The plain-text portion of the campaign. If left unspecified, we’ll generate this automatically.
 | url       | String| When importing a campaign, the URL where the HTML lives.
@@ -2892,7 +2891,7 @@ Method description
 
 | Field           | Type  | Description
 |-----------------|-------|----------
-| apiKey          | String| The api key obtained from MailChimp.
+| apiKey          | credentials| The api key obtained from MailChimp.
 | campaignId      | String| The unique id for the campaign.
 | templateId      | String| The id of the template to use.
 | templateSections| String| Content for the sections of the template. Each key should be the unique mc:edit area name from the template.
@@ -2926,7 +2925,7 @@ Method description
 
 | Field             | Type  | Description
 |-------------------|-------|----------
-| apiKey            | String| The api key obtained from MailChimp.
+| apiKey            | credentials| The api key obtained from MailChimp.
 | listId            | String|  The unique id for the list.
 | emailType         | String| Type of email this member asked to get (‘html’ or ‘text’).
 | status            | String| Subscriber’s current status.
@@ -2979,7 +2978,7 @@ Method description
 
 | Field             | Type  | Description
 |-------------------|-------|----------
-| apiKey            | String| The api key obtained from MailChimp.
+| apiKey            | credentials| The api key obtained from MailChimp.
 | listId            | String|  The unique id for the list.
 | fields            | String| A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
 | excludeFields     | String| A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
@@ -3030,7 +3029,7 @@ Method description
 
 | Field         | Type  | Description
 |---------------|-------|----------
-| apiKey        | String| The api key obtained from MailChimp.
+| apiKey        | credentials| The api key obtained from MailChimp.
 | listId        | String|  The unique id for the list.
 | subscriberHash| String| The MD5 hash of the lowercase version of the list member’s email address.
 | fields        | String| A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
@@ -3063,7 +3062,7 @@ Method description
 
 | Field             | Type  | Description
 |-------------------|-------|----------
-| apiKey            | String| The api key obtained from MailChimp.
+| apiKey            | credentials| The api key obtained from MailChimp.
 | listId            | String|  The unique id for the list.
 | subscriberHash    | String| The MD5 hash of the lowercase version of the list member’s email address.
 | emailType         | String| Type of email this member asked to get (‘html’ or ‘text’).
@@ -3116,7 +3115,7 @@ Method description
 
 | Field         | Type  | Description
 |---------------|-------|----------
-| apiKey        | String| The api key obtained from MailChimp.
+| apiKey        | credentials| The api key obtained from MailChimp.
 | listId        | String|  The unique id for the list.
 | subscriberHash| String| The MD5 hash of the lowercase version of the list member’s email address.
 
@@ -3145,7 +3144,7 @@ Method description
 
 | Field         | Type  | Description
 |---------------|-------|----------
-| apiKey        | String| The api key obtained from MailChimp.
+| apiKey        | credentials| The api key obtained from MailChimp.
 | listId        | String|  The unique id for the list.
 | subscriberHash| String| The MD5 hash of the lowercase version of the list member’s email address.
 | fields        | String| A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
@@ -3178,7 +3177,7 @@ Method description
 
 | Field         | Type  | Description
 |---------------|-------|----------
-| apiKey        | String| The api key obtained from MailChimp.
+| apiKey        | credentials| The api key obtained from MailChimp.
 | listId        | String|  The unique id for the list.
 | subscriberHash| String| The MD5 hash of the lowercase version of the list member’s email address.
 | fields        | String| A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
@@ -3211,7 +3210,7 @@ Method description
 
 | Field         | Type  | Description
 |---------------|-------|----------
-| apiKey        | String| The api key obtained from MailChimp.
+| apiKey        | credentials| The api key obtained from MailChimp.
 | listId        | String|  The unique id for the list.
 | subscriberHash| String| The MD5 hash of the lowercase version of the list member’s email address.
 | note          | String| The content of the note.
@@ -3242,7 +3241,7 @@ Method description
 
 | Field         | Type  | Description
 |---------------|-------|----------
-| apiKey        | String| The api key obtained from MailChimp.
+| apiKey        | credentials| The api key obtained from MailChimp.
 | listId        | String|  The unique id for the list.
 | subscriberHash| String| The MD5 hash of the lowercase version of the list member’s email address.
 | noteId        | String| The content of the note.
@@ -3277,7 +3276,7 @@ Method description
 
 | Field         | Type  | Description
 |---------------|-------|----------
-| apiKey        | String| The api key obtained from MailChimp.
+| apiKey        | credentials| The api key obtained from MailChimp.
 | listId        | String|  The unique id for the list.
 | subscriberHash| String| The MD5 hash of the lowercase version of the list member’s email address.
 | noteId        | String| The content of the note.
@@ -3310,7 +3309,7 @@ Method description
 
 | Field         | Type  | Description
 |---------------|-------|----------
-| apiKey        | String| The api key obtained from MailChimp.
+| apiKey        | credentials| The api key obtained from MailChimp.
 | listId        | String|  The unique id for the list.
 | subscriberHash| String| The MD5 hash of the lowercase version of the list member’s email address.
 | noteId        | String| The content of the note.
@@ -3341,7 +3340,7 @@ Method description
 
 | Field                | Type  | Description
 |----------------------|-------|----------
-| apiKey               | String| The api key obtained from MailChimp.
+| apiKey               | credentials| The api key obtained from MailChimp.
 | listId               | String|  The unique id for the list.
 | tag                  | String| The tag used in MailChimp campaigns and for the /members endpoint.
 | name                 | String| The name of the merge field.
@@ -3394,7 +3393,7 @@ Method description
 
 | Field                         | Type  | Description
 |-------------------------------|-------|----------
-| apiKey                        | String| The api key obtained from MailChimp.
+| apiKey                        | credentials| The api key obtained from MailChimp.
 | listId                        | String|  The unique id for the list.
 | name                          | String| The name of the segment.
 | staticSegment                 | String| An array of emails to be used for a static segment. Any emails provided that are not present on the list will be ignored. Passing an empty array will create a static segment without any subscribers. This field cannot be provided with the options field.
@@ -3429,7 +3428,7 @@ Method description
 
 | Field          | Type  | Description
 |----------------|-------|----------
-| apiKey         | String| The api key obtained from MailChimp.
+| apiKey         | credentials| The api key obtained from MailChimp.
 | listId         | String|  The unique id for the list.
 | fields         | String| A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
 | excludeFields  | String| A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
@@ -3474,7 +3473,7 @@ Method description
 
 | Field        | Type  | Description
 |--------------|-------|----------
-| apiKey       | String| The api key obtained from MailChimp.
+| apiKey       | credentials| The api key obtained from MailChimp.
 | listId       | String|  The unique id for the list.
 | segmentId    | String| The unique id for the segment.
 | fields       | String| A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
@@ -3507,7 +3506,7 @@ Method description
 
 | Field                         | Type  | Description
 |-------------------------------|-------|----------
-| apiKey                        | String| The api key obtained from MailChimp.
+| apiKey                        | credentials| The api key obtained from MailChimp.
 | listId                        | String|  The unique id for the list.
 | segmentId                     | String| The unique id for the segment.
 | name                          | String| The name of the segment.
@@ -3544,7 +3543,7 @@ Method description
 
 | Field    | Type  | Description
 |----------|-------|----------
-| apiKey   | String| The api key obtained from MailChimp.
+| apiKey   | credentials| The api key obtained from MailChimp.
 | listId   | String|  The unique id for the list.
 | segmentId| String| The unique id for the segment.
 
@@ -3573,7 +3572,7 @@ Method description
 
 | Field       | Type  | Description
 |-------------|-------|----------
-| apiKey      | String| The api key obtained from MailChimp.
+| apiKey      | credentials| The api key obtained from MailChimp.
 | listId      | String|  The unique id for the list.
 | segmentId   | String| The unique id for the segment.
 | emailAddress| String| Email address for a subscriber.
@@ -3606,7 +3605,7 @@ Method description
 
 | Field        | Type  | Description
 |--------------|-------|----------
-| apiKey       | String| The api key obtained from MailChimp.
+| apiKey       | credentials| The api key obtained from MailChimp.
 | listId       | String|  The unique id for the list.
 | segmentId    | String| The unique id for the segment.
 | fields       | String| A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
@@ -3643,7 +3642,7 @@ Method description
 
 | Field         | Type  | Description
 |---------------|-------|----------
-| apiKey        | String| The api key obtained from MailChimp.
+| apiKey        | credentials| The api key obtained from MailChimp.
 | listId        | String|  The unique id for the list.
 | segmentId     | String| The unique id for the segment.
 | subscriberHash| String| The MD5 hash of the lowercase version of the list member’s email address.
@@ -3674,7 +3673,7 @@ Method description
 
 | Field                 | Type  | Description
 |-----------------------|-------|----------
-| apiKey                | String| The api key obtained from MailChimp.
+| apiKey                | credentials| The api key obtained from MailChimp.
 | listId                | String|  The unique id for the list.
 | headerImageUrl        | String| Header image URL.
 | headerText            | String| Header text.
@@ -3735,7 +3734,7 @@ Method description
 
 | Field | Type  | Description
 |-------|-------|----------
-| apiKey| String| The api key obtained from MailChimp.
+| apiKey| credentials| The api key obtained from MailChimp.
 | listId| String|  The unique id for the list.
 
 #### Request example
@@ -3762,7 +3761,7 @@ Method description
 
 | Field           | Type  | Description
 |-----------------|-------|----------
-| apiKey          | String| The api key obtained from MailChimp.
+| apiKey          | credentials| The api key obtained from MailChimp.
 | listId          | String|  The unique id for the list.
 | id              | String|  The unique id for the list.
 | name            | String|  The unique id for the list.
@@ -3811,7 +3810,7 @@ Method description
 
 | Field | Type  | Description
 |-------|-------|----------
-| apiKey| String| The api key obtained from MailChimp.
+| apiKey| credentials| The api key obtained from MailChimp.
 | listId| String|  The unique id for the list.
 
 #### Request example
@@ -3838,7 +3837,7 @@ Method description
 
 | Field        | Type  | Description
 |--------------|-------|----------
-| apiKey       | String| The api key obtained from MailChimp.
+| apiKey       | credentials| The api key obtained from MailChimp.
 | listId       | String|  The unique id for the list.
 | twitterCardId| String|  The unique ID for the Twitter Lead Generation Card.
 
@@ -3867,7 +3866,7 @@ Method description
 
 | Field            | Type  | Description
 |------------------|-------|----------
-| apiKey           | String| The api key obtained from MailChimp.
+| apiKey           | credentials| The api key obtained from MailChimp.
 | listId           | String|  The unique id for the list.
 | url              | String| A valid URL for the Webhook.
 | eventsSubscribe  | String| Optional: Whether the webhook is triggered when a list subscriber is added.
@@ -3914,7 +3913,7 @@ Method description
 
 | Field | Type  | Description
 |-------|-------|----------
-| apiKey| String| The api key obtained from MailChimp.
+| apiKey| credentials| The api key obtained from MailChimp.
 | listId| String|  The unique id for the list.
 
 #### Request example
@@ -3941,7 +3940,7 @@ Method description
 
 | Field    | Type  | Description
 |----------|-------|----------
-| apiKey   | String| The api key obtained from MailChimp.
+| apiKey   | credentials| The api key obtained from MailChimp.
 | listId   | String|  The unique id for the list.
 | webhookId| String|  The unique id for the webhook.
 
@@ -3970,7 +3969,7 @@ Method description
 
 | Field    | Type  | Description
 |----------|-------|----------
-| apiKey   | String| The api key obtained from MailChimp.
+| apiKey   | credentials| The api key obtained from MailChimp.
 | listId   | String|  The unique id for the list.
 | webhookId| String|  The unique id for the webhook.
 
@@ -3999,7 +3998,7 @@ Method description
 
 | Field | Type  | Description
 |-------|-------|----------
-| apiKey| String| The api key obtained from MailChimp.
+| apiKey| credentials| The api key obtained from MailChimp.
 | name  | String|  The name of the folder.
 
 #### Request example
@@ -4026,7 +4025,7 @@ Method description
 
 | Field        | Type  | Description
 |--------------|-------|----------
-| apiKey       | String| The api key obtained from MailChimp.
+| apiKey       | credentials| The api key obtained from MailChimp.
 | fields       | String| Optional: A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
 | excludeFields| String| Optional: A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
 | count        | String| Optional: The number of records to return.
@@ -4059,7 +4058,7 @@ Method description
 
 | Field        | Type  | Description
 |--------------|-------|----------
-| apiKey       | String| The api key obtained from MailChimp.
+| apiKey       | credentials| The api key obtained from MailChimp.
 | folderId     | String| The unique id for the template folder.
 | fields       | String| Optional: A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
 | excludeFields| String| Optional: A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
@@ -4090,7 +4089,7 @@ Method description
 
 | Field   | Type  | Description
 |---------|-------|----------
-| apiKey  | String| The api key obtained from MailChimp.
+| apiKey  | credentials| The api key obtained from MailChimp.
 | folderId| String| The unique id for the template folder.
 | name    | String| The name of the folder.
 
@@ -4119,7 +4118,7 @@ Method description
 
 | Field   | Type  | Description
 |---------|-------|----------
-| apiKey  | String| The api key obtained from MailChimp.
+| apiKey  | credentials| The api key obtained from MailChimp.
 | folderId| String| The unique id for the template folder.
 
 #### Request example
@@ -4146,7 +4145,7 @@ Method description
 
 | Field   | Type  | Description
 |---------|-------|----------
-| apiKey  | String| The api key obtained from MailChimp.
+| apiKey  | credentials| The api key obtained from MailChimp.
 | name    | String| The name of the template.
 | folderId| String| Optional: The id of the folder the template is currently in.
 | html    | String| The raw HTML for the template. Supported the MailChimp Template Language
@@ -4177,7 +4176,7 @@ Method description
 
 | Field          | Type  | Description
 |----------------|-------|----------
-| apiKey         | String| The api key obtained from MailChimp.
+| apiKey         | credentials| The api key obtained from MailChimp.
 | fields         | String| Optional: A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
 | excludeFields  | String| Optional: A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
 | count          | String| Optional: The number of records to return.
@@ -4220,7 +4219,7 @@ Method description
 
 | Field        | Type  | Description
 |--------------|-------|----------
-| apiKey       | String| The api key obtained from MailChimp.
+| apiKey       | credentials| The api key obtained from MailChimp.
 | templateId   | String| The unique id for the template.
 | fields       | String| Optional: A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
 | excludeFields| String| Optional: A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
@@ -4251,7 +4250,7 @@ Method description
 
 | Field     | Type  | Description
 |-----------|-------|----------
-| apiKey    | String| The api key obtained from MailChimp.
+| apiKey    | credentials| The api key obtained from MailChimp.
 | templateId| String| The unique id for the template.
 | name      | String| The name of the template.
 | folderId  | String| Optional: The id of the folder the template is currently in.
@@ -4284,7 +4283,7 @@ Method description
 
 | Field     | Type  | Description
 |-----------|-------|----------
-| apiKey    | String| The api key obtained from MailChimp.
+| apiKey    | credentials| The api key obtained from MailChimp.
 | templateId| String| The unique id for the template.
 
 #### Request example
@@ -4311,7 +4310,7 @@ Method description
 
 | Field        | Type  | Description
 |--------------|-------|----------
-| apiKey       | String| The api key obtained from MailChimp.
+| apiKey       | credentials| The api key obtained from MailChimp.
 | templateId   | String| The unique id for the template.
 | fields       | String| Optional: A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
 | excludeFields| String| Optional: A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
@@ -4342,7 +4341,7 @@ Method description
 
 | Field     | Type  | Description
 |-----------|-------|----------
-| apiKey    | String| The api key obtained from MailChimp.
+| apiKey    | credentials| The api key obtained from MailChimp.
 | campaignId| String| The unique id for the campaign.
 | plainText | String| Optional: The plain-text portion of the campaign. If left unspecified, we’ll generate this automatically.
 | url       | String| When importing a campaign, the URL where the HTML lives.
@@ -4373,7 +4372,7 @@ Method description
 
 | Field           | Type  | Description
 |-----------------|-------|----------
-| apiKey          | String| The api key obtained from MailChimp.
+| apiKey          | credentials| The api key obtained from MailChimp.
 | campaignId      | String| The unique id for the campaign.
 | plainText       | String| Optional: The plain-text portion of the campaign. If left unspecified, we’ll generate this automatically.
 | templateId      | String| The id of the template to use.

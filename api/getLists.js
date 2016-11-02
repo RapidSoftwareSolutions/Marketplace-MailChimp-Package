@@ -45,10 +45,10 @@ module.exports = (req, res) => {
 	
 	return request(options, (err, response, body) => {
 		if(!err && response.statusCode == 200) {
-    		r.contextWrites[to] = JSON.stringify(body);
+    		r.contextWrites[to] = JSON.parse(body);
             r.callback = 'success'; 
         } else {
-            r.contextWrites[to] = JSON.stringify(err || body);
+            r.contextWrites[to] = JSON.parse(err || body);
             r.callback = 'error';
         }
 

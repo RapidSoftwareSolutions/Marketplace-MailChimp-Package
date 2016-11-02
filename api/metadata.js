@@ -12,7 +12,7 @@ module.exports.do = function(req, res){
             ]
         },
         'blocks': [
-                {
+        {
             "name":"getAutomationsList",
             "args":[
                 {
@@ -2079,7 +2079,7 @@ module.exports.do = function(req, res){
                     'info': 'Success'
                 }
             ]
-        },{
+        }/*, {
             "name":"getListGrowthHistory",
             "args":[
                 {
@@ -4358,7 +4358,7 @@ module.exports.do = function(req, res){
                     'info': 'Success'
                 }
             ]
-        },{
+        }*/,{
             "name":"setCampaignContentHTML",
             "args":[
                 {

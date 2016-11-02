@@ -38,7 +38,7 @@ module.exports = (req, res) => {
     		r.contextWrites[to] = 'Success';
             r.callback = 'success'; 
         } else {
-            r.contextWrites[to] = JSON.stringify(err || body);
+            r.contextWrites[to] = JSON.parse(err || body);
             r.callback = 'error';
         }
 

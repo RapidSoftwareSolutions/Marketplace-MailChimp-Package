@@ -40,7 +40,7 @@ module.exports = (req, res) => {
 	let options = {
 		method: 'POST',
 		url: `https://${dc}api.mailchimp.com/3.0/campaigns/${campaignId}/actions/test`, 
-		body: JSON.stringify(body)
+		body: JSON.parse(body)
 	};
 
 	return request(options, (err, response, body) => {
@@ -48,7 +48,7 @@ module.exports = (req, res) => {
     		r.contextWrites[to] = 'Success';
             r.callback = 'success'; 
         } else {
-            r.contextWrites[to] = JSON.stringify(err || body);
+            r.contextWrites[to] = JSON.parse(err || body);
             r.callback = 'error';
         }
 

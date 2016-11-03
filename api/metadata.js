@@ -516,8 +516,8 @@ module.exports.do = function(req, res){
                 },
                 {
                     name: "autoFbPost",
-                    type: "Array",
-                    info: "An array of Facebook page ids to auto-post to.",
+                    type: "String",
+                    info: "An comma separated string of Facebook page ids to auto-post to.",
                 },
                 {
                     name: "fbComments",
@@ -541,22 +541,22 @@ module.exports.do = function(req, res){
                 },
                 {
                     name: "variateSettingsSubjectLines",
-                    type: "Array",
+                    type: "String",
                     info: "The possible subject lines to test. If no subject lines are provided, settings.subject_line will be used.",
                 },
                 {
                     name: "variateSettingsSendTimes",
-                    type: "Array",
+                    type: "String",
                     info: "The possible send times to test. The times provided should be in the format YYYY-MM-DD HH:MM:SS. If send_times are provided to test, the test_size will be set to 100% and winner_criteria will be ignored.",
                 },
                 {
                     name: "variateSettingsFromNames",
-                    type: "Array",
+                    type: "String",
                     info: "The possible from names. The number of from_names provided must match the number of reply_to_addresses. If no from_names are provided, settings.from_name will be used.",
                 },
                 {
                     name: "replyToAddresses",
-                    type: "Array",
+                    type: "String",
                     info: "The possible reply-to addresses. The number of reply_to_addresses provided must match the number of from_names. If no reply_to_addresses are provided, settings.reply_to will be used.",
                 },
                 {
@@ -873,8 +873,8 @@ module.exports.do = function(req, res){
                 },
                 {
                     name: "autoFbPost",
-                    type: "Array",
-                    info: "An array of Facebook page ids to auto-post to.",
+                    type: "String",
+                    info: "An String of Facebook page ids to auto-post to.",
                 },
                 {
                     name: "fbComments",
@@ -898,22 +898,22 @@ module.exports.do = function(req, res){
                 },
                 {
                     name: "variateSettingsSubjectLines",
-                    type: "Array",
+                    type: "String",
                     info: "The possible subject lines to test. If no subject lines are provided, settings.subject_line will be used.",
                 },
                 {
                     name: "variateSettingsSendTimes",
-                    type: "Array",
+                    type: "String",
                     info: "The possible send times to test. The times provided should be in the format YYYY-MM-DD HH:MM:SS. If send_times are provided to test, the test_size will be set to 100% and winner_criteria will be ignored.",
                 },
                 {
                     name: "variateSettingsFromNames",
-                    type: "Array",
+                    type: "String",
                     info: "The possible from names. The number of from_names provided must match the number of reply_to_addresses. If no from_names are provided, settings.from_name will be used.",
                 },
                 {
                     name: "replyToAddresses",
-                    type: "Array",
+                    type: "String",
                     info: "The possible reply-to addresses. The number of reply_to_addresses provided must match the number of from_names. If no reply_to_addresses are provided, settings.reply_to will be used.",
                 },
                 {
@@ -3227,7 +3227,7 @@ module.exports.do = function(req, res){
                 {
                     name: "staticSegment",
                     type: "String",
-                    info: "An array of emails to be used for a static segment. Any emails provided that are not present on the list will be ignored. Passing an empty array will create a static segment without any subscribers. This field cannot be provided with the options field.",
+                    info: "An String of emails to be used for a static segment. Any emails provided that are not present on the list will be ignored. Passing an empty String will create a static segment without any subscribers. This field cannot be provided with the options field.",
                 },
                 {
                     name: "optionsMatch",
@@ -3384,7 +3384,7 @@ module.exports.do = function(req, res){
                 {
                     name: "staticSegment",
                     type: "String",
-                    info: "An array of emails to be used for a static segment. Any emails provided that are not present on the list will be ignored. Passing an empty array will create a static segment without any subscribers. This field cannot be provided with the options field.",
+                    info: "An String of emails to be used for a static segment. Any emails provided that are not present on the list will be ignored. Passing an empty String will create a static segment without any subscribers. This field cannot be provided with the options field.",
                 },
                 {
                     name: "optionsMatch",
@@ -3394,7 +3394,7 @@ module.exports.do = function(req, res){
                 {
                     name: "optionsConditionsConditionType",
                     type: "String",
-                    info: "An array of segment conditions.",
+                    info: "An String of segment conditions.",
                 }
             ], 
             'callbacks':[

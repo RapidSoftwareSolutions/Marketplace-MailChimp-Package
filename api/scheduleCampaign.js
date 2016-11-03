@@ -37,7 +37,7 @@ module.exports = (req, res) => {
 	let options = {
 		method: 'POST',
 		url: `https://${dc}api.mailchimp.com/3.0/campaigns/${campaignId}/actions/schedule`, 
-		body: JSON.parse(body)
+		body: JSON.stringify(body)
 	}
 
 	return request(options, (err, response, body) => {

@@ -1,0 +1,1843 @@
+{
+  	"name": "MailChimp", 
+  	"description": "The MailChimp Package can be used to build real time application based on the MailChimp platform.",
+  	"version": "1.0", 
+  	"steps": [  
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"fields\": \"\",\r\n\t\"excludeFields\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/getAutomationsList", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"workflowId\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/getAutomationInWorkflow", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"workflowId\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/pauseAllEmails", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"workflowId\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/startAllEmails", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"workflowId\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/getAutomatedEmailsList", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"workflowId\": \"\",\r\n\t\"emailId\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/getWorkflowEmail", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"workflowId\": \"\",\r\n\t\"emailId\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/pauseAutomatedEmail", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"workflowId\": \"\",\r\n\t\"emailId\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/startAutomatedEmail", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"workflowId\": \"\",\r\n\t\"emailId\": \"\",\r\n\t\"emailAddress\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/addWorkflowEmailSubscriber", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"workflowId\": \"\",\r\n\t\"emailId\": \"\",\r\n\t\"emailAddress\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/getEmailSubscriber", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"workflowId\": \"\",\r\n\t\"emailAddress\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/removeWorkflowSubscriber", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"name\": \"test\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/createCampaignFolder", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/getCampaignFolders", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"folderId\": \"d559fd8e64\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/getCampaignFolder", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"folderId\": \"d559fd8e64\",\r\n\t\"name\": \"test\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/updateCampaignFolder", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"folderId\": \"d559fd8e64\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/deleteCampaignFolder", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"type\": \"regular\",\r\n\t\"recipientsListId\": \"d196963f42\",\r\n\t\"subjectLine\": \"yoyoyoy\",\r\n\t\"title\": \"sadasd\",\r\n\t\"fromName\": \"121412\",\r\n\t\"replyTo\": \"dima.shirokoff@rapida2pi.com\",\r\n\t\"useConversation\": \"\",\r\n\t\"toName\": \"\",\r\n\t\"folderId\": \"d559fd8e64\",\r\n\t\"authenticate\": \"\",\r\n\t\"autoFooter\": \"\",\r\n\t\"inlineCss\": \"\",\r\n\t\"autoTweet\": \"\",\r\n\t\"autoFbPost\": \"\",\r\n\t\"fbComments\": \"\",\r\n\t\"variateSettingsWinnerCriteria\": \"opens\",\r\n\t\"variateSettingsWaitTime\": \"0\",\r\n\t\"variateSettingsTestSize\": \"0\",\r\n\t\"variateSettingsSubjectLines\": \"\",\r\n\t\"variateSettingsSendTimes\": \"\",\r\n\t\"variateSettingsFromNames\": \"\",\r\n\t\"replyToAddresses\": \"\",\r\n\t\"trackingOpens\": \"true\",\r\n\t\"trackingHtmlClicks\": \"\",\r\n\t\"trackingTextClicks\": \"\",\r\n\t\"trackingGoalTracking\": \"\",\r\n\t\"trackingEcomm360\": \"\",\r\n\t\"trackingGoogleAnalytics\": \"\",\r\n\t\"trackingClicktale \": \"\",\r\n\t\"trackingSalesforceCampaign \": \"\",\r\n\t\"trackingSalesforceNotes \": \"\",\r\n\t\"trackingHighriseCampaign\": \"\",\r\n\t\"trackingHighriseNotes\": \"\",\r\n\t\"trackingCapsuleNotes\": \"\",\r\n\t\"rssOptsFeedUrl\": \"yo\",\r\n\t\"rssOptsFrequency\": \"daily\",\r\n\t\"rssOptsScheduleHour\": \"\",\r\n\t\"rssOptsScheduleDailySendSunday\": \"\",\r\n\t\"rssOptsScheduleDailySendMonday\": \"\",\r\n\t\"rssOptsScheduleDailySendTuesday\": \"\",\r\n\t\"rssOptsScheduleDailySendWednesday\": \"\",\r\n\t\"rssOptsScheduleDailySendThursday\": \"\",\r\n\t\"rssOptsScheduleDailySendFriday\": \"\",\r\n\t\"rssOptsScheduleDailySendSaturday\": \"\",\r\n\t\"rssOptsScheduleWeeklySendDay\": \"\",\r\n\t\"rssOptsScheduleMonthlySendDate\": \"\",\r\n\t\"rssOptsLastSent\": \"\",\r\n\t\"rssOptsConstrainRssImg\": \"\",\r\n\t\"socialCardImageUrl\": \"\",\r\n\t\"socialCardDescription\": \"\",\r\n\t\"socialCardTitle\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/createCampaign", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"type\": \"regular\",\r\n\t\"status\": \"\",\r\n\t\"beforeSendTime\": \"\",\r\n\t\"sinceSendTime\": \"\",\r\n\t\"beforeCreateTime\": \"\",\r\n\t\"sinceCreateTime\": \"\",\r\n\t\"listId\": \"d196963f42\",\r\n\t\"folderId\": \"d559fd8e64\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/getCampaigns", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"campaignId\": \"9aefe5abbf\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/getCampaign", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"campaignId\": \"9aefe5abbf\",\r\n\t\"recipientsListId\": \"d196963f42\",\r\n\t\"subjectLine\": \"yoyoyoy\",\r\n\t\"title\": \"sadasd\",\r\n\t\"fromName\": \"121412\",\r\n\t\"replyTo\": \"dima.shirokoff@rapida2pi.com\",\r\n\t\"useConversation\": \"\",\r\n\t\"toName\": \"\",\r\n\t\"folderId\": \"d559fd8e64\",\r\n\t\"authenticate\": \"\",\r\n\t\"autoFooter\": \"\",\r\n\t\"inlineCss\": \"\",\r\n\t\"autoTweet\": \"\",\r\n\t\"autoFbPost\": \"\",\r\n\t\"fbComments\": \"\",\r\n\t\"variateSettingsWinnerCriteria\": \"opens\",\r\n\t\"variateSettingsWaitTime\": \"0\",\r\n\t\"variateSettingsTestSize\": \"0\",\r\n\t\"variateSettingsSubjectLines\": \"\",\r\n\t\"variateSettingsSendTimes\": \"\",\r\n\t\"variateSettingsFromNames\": \"\",\r\n\t\"replyToAddresses\": \"\",\r\n\t\"trackingOpens\": \"true\",\r\n\t\"trackingHtmlClicks\": \"\",\r\n\t\"trackingTextClicks\": \"\",\r\n\t\"trackingGoalTracking\": \"\",\r\n\t\"trackingEcomm360\": \"\",\r\n\t\"trackingGoogleAnalytics\": \"\",\r\n\t\"trackingClicktale \": \"\",\r\n\t\"trackingSalesforceCampaign \": \"\",\r\n\t\"trackingSalesforceNotes \": \"\",\r\n\t\"trackingHighriseCampaign\": \"\",\r\n\t\"trackingHighriseNotes\": \"\",\r\n\t\"trackingCapsuleNotes\": \"\",\r\n\t\"rssOptsFeedUrl\": \"yo\",\r\n\t\"rssOptsFrequency\": \"daily\",\r\n\t\"rssOptsScheduleHour\": \"\",\r\n\t\"rssOptsScheduleDailySendSunday\": \"\",\r\n\t\"rssOptsScheduleDailySendMonday\": \"\",\r\n\t\"rssOptsScheduleDailySendTuesday\": \"\",\r\n\t\"rssOptsScheduleDailySendWednesday\": \"\",\r\n\t\"rssOptsScheduleDailySendThursday\": \"\",\r\n\t\"rssOptsScheduleDailySendFriday\": \"\",\r\n\t\"rssOptsScheduleDailySendSaturday\": \"\",\r\n\t\"rssOptsScheduleWeeklySendDay\": \"\",\r\n\t\"rssOptsScheduleMonthlySendDate\": \"\",\r\n\t\"rssOptsLastSent\": \"\",\r\n\t\"rssOptsConstrainRssImg\": \"\",\r\n\t\"socialCardImageUrl\": \"\",\r\n\t\"socialCardDescription\": \"\",\r\n\t\"socialCardTitle\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/updateCampaign", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"campaignId\": \"9aefe5abbf\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/deleteCampaign", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"campaignId\": \"9aefe5abbf\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/cancelCampaign", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"campaignId\": \"9aefe5abbf\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/replicateCampaign", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"campaignId\": \"9aefe5abbf\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/resumeRSSCampaign", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"campaignId\": \"9aefe5abbf\",\r\n\t\"scheduleTime\": \"\",\r\n\t\"timewarp\": \"\",\r\n\t\"batchDeliveryBatchDelay\": \"\",\r\n\t\"batchDeliveryBatchCount\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/scheduleCampaign", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"campaignId\": \"9aefe5abbf\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/sendCampaign", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"campaignId\": \"9aefe5abbf\",\r\n\t\"testEmails\": \"\",\r\n\t\"sendType\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/sendTestEmail", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"campaignId\": \"9aefe5abbf\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/unscheduleCampaign", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"campaignId\": \"9aefe5abbf\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/getCampaignContent", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"campaignId\": \"9aefe5abbf\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/getSendChecklist", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/getConversationsList", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"conversationId\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/getConversation", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"conversationId\": \"\",\r\n\t\"fromEmail\": \"\",\r\n\t\"subject\": \"\",\r\n\t\"message\": \"\",\r\n\t\"read\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/sendConversationMessage", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"conversationId\": \"\",\r\n\t\"isRead\": \"\",\r\n\t\"beforeTimestamp\": \"\",\r\n\t\"sinceTimestamp\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/getConversationMessages", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"conversationId\": \"\",\r\n\t\"messageId \": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/getConversationMessage", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"name\": \"test\",\r\n\t\"contactCompany\": \"test\",\r\n\t\"contactAddress1\": \"addr1\",\r\n\t\"contactAddress2\": \"\",\r\n\t\"contactCity\": \"kiev\",\r\n\t\"contactState\": \"teststat\",\r\n\t\"contactZip\": \"03211\",\r\n\t\"contactCountry\": \"ukraine\",\r\n\t\"contactPhone\": \"1234 4321 12\",\r\n\t\"permissionReminder\": \"test\",\r\n\t\"useArchiveBar\": \"true\",\r\n\t\"campaignDefaultsFromName\": \"dima\",\r\n\t\"campaignDefaultsFromEmail\": \"emddas@ukr.net\",\r\n\t\"campaignDefaultsSubject\": \"test subject\",\r\n\t\"campaignDefaultsLanguage\": \"eng\",\r\n\t\"notifyOnSubscribe\": \"\",\r\n\t\"notifyOnUnsubscribe\": \"\",\r\n\t\"emailTypeOption\": \"true\",\r\n\t\"visibility\": \"pub\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/createList", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"listId\": \"d196963f42\",\r\n\t\"members\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/batchAddMembersToList", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"beforeDateCreated\": \"\",\r\n\t\"sinceDateCreated\": \"\",\r\n\t\"beforeCampaignLastSent\": \"\",\r\n\t\"sinceCampaignLastSent\": \"\",\r\n\t\"email\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/getLists", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"listId\": \"d196963f42\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/getList", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"listId\": \"d196963f42\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/deleteList", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"listId\": \"d196963f42\",\r\n\t\"name\": \"test\",\r\n\t\"contactCompany\": \"test\",\r\n\t\"contactAddress1\": \"addr1\",\r\n\t\"contactAddress2\": \"\",\r\n\t\"contactCity\": \"kiev\",\r\n\t\"contactState\": \"teststat\",\r\n\t\"contactZip\": \"03211\",\r\n\t\"contactCountry\": \"ukraine\",\r\n\t\"contactPhone\": \"1234 4321 12\",\r\n\t\"permissionReminder\": \"test\",\r\n\t\"useArchiveBar\": \"true\",\r\n\t\"campaignDefaultsFromName\": \"dima\",\r\n\t\"campaignDefaultsFromEmail\": \"emddas@ukr.net\",\r\n\t\"campaignDefaultsSubject\": \"test subject\",\r\n\t\"campaignDefaultsLanguage\": \"eng\",\r\n\t\"notifyOnSubscribe\": \"\",\r\n\t\"notifyOnUnsubscribe\": \"\",\r\n\t\"emailTypeOption\": \"true\",\r\n\t\"visibility\": \"pub\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/updateList", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"listId\": \"d196963f42\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/getAbuseReportsList", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"listId\": \"d196963f42\",\r\n\t\"reportId\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/getAbuseReport", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"listId\": \"d196963f42\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/getListActivity", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"listId\": \"d196963f42\",\r\n\t\"title\": \"sadasd\",\r\n\t\"displayOrder\": \"\",\r\n\t\"type\": \"regular\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/createInterestCategory", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"listId\": \"d196963f42\",\r\n\t\"fields\": \"\",\r\n\t\"excludeFields\": \"\",\r\n\t\"count\": \"\",\r\n\t\"offset\": \"\",\r\n\t\"type\": \"regular\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/getInterestCategories", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"listId\": \"d196963f42\",\r\n\t\"interestCategoryId\": \"\",\r\n\t\"fields\": \"\",\r\n\t\"excludeFields\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/getInterestCategory", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"listId\": \"d196963f42\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/getTopEmailClients", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"campaignId\": \"9aefe5abbf\",\r\n\t\"plainText\": \"\",\r\n\t\"html\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/setCampaignContentHTML", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"campaignId\": \"9aefe5abbf\",\r\n\t\"plainText\": \"\",\r\n\t\"url\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/setCampaignContentFromURL", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"apiKey\": \"e496f5e1e6276e9b85aa22a914a719af-us14\",\r\n\t\"campaignId\": \"9aefe5abbf\",\r\n\t\"plainText\": \"\",\r\n\t\"templateId\": \"\",\r\n\t\"templateSections\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/MailChimp/setCampaignContentFromTemplate", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        }
+  	]
+}

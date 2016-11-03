@@ -15,7 +15,7 @@ const apiKey = 'e496f5e1e6276e9b85aa22a914a719af-us14',
       type = 'regular',
       name = 'test',
       folderId = 'd559fd8e64',
-      campaignId = '9aefe5abbf',
+      campaignId = '129c1c7d49',
       contactCompany = 'test',
       contactAddress1 = 'addr1',
       contactCity = 'kiev',
@@ -31,7 +31,7 @@ const apiKey = 'e496f5e1e6276e9b85aa22a914a719af-us14',
       campaignDefaultsLanguage = 'eng',
       emailTypeOption = 'true',
       visibility = 'pub',
-      listId = 'd196963f42'
+      listId = '7bdeaca8e5'
 
 
 describe('MailChimp API', () => {
@@ -131,6 +131,7 @@ describe('MailChimp API', () => {
         .post(`/api/${global.PACKAGE_NAME}/updateCampaign`)
         .send({args:{apiKey, campaignId, type, recipientsListId, subjectLine, title, fromName, replyTo}})
         .then((res) => {
+           console.log(res.body)
            assert.equal(res.body.callback, 'success');
         });
     });

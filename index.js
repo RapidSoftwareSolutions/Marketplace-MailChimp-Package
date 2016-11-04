@@ -22,8 +22,6 @@ fs.readdirSync('api/').forEach((file) => {
 
 	   if(!type == 'js') return;
 
-	    console.log(route)
-
 	   app.post(`/api/${PACKAGE_NAME}/${route}`, require(`./api/${file}`));
     } catch(e) { /*console.log(e);*/ return; }
 });

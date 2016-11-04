@@ -1,5 +1,4 @@
-module.exports.do = function(req, res) {
-    res.status(200).send({
+{
   "package": "MailChimp",
   "tagline": "MailChimp Package",
   "description": "The MailChimp Package can be used to build real time application based on the MailChimp platform.",
@@ -2108,5 +2107,4 @@ module.exports.do = function(req, res) {
       ]
     }
   ]
-})
-};
+}

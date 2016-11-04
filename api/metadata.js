@@ -1928,7 +1928,7 @@ module.exports.do = function(req, res){
                     'info': 'Success'
                 }
             ]
-        },{
+        }, /*{
             "name":"createInterestCategory",
             "args":[
                 {
@@ -2055,7 +2055,7 @@ module.exports.do = function(req, res){
                     'info': 'Success'
                 }
             ]
-        },{
+        },*/ {
             "name":"getTopEmailClients",
             "args":[
                 {

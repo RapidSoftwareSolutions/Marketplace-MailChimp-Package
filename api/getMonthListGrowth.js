@@ -11,7 +11,7 @@ module.exports = (req, res) => {
 		listId,
 		fields,
 		excludeFields,
-		month
+		month,
 		to="to" } = req.body.args;
 
 	let r  = {

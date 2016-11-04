@@ -10,7 +10,7 @@ module.exports = (req, res) => {
 		apiKey, 
 		campaignId,
 		plainText,
-		templateId
+		templateId,
 		to="to" } = req.body.args;
 
 	let r  = {

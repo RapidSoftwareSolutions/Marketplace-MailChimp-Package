@@ -3,44 +3,44 @@ const request = require('request');
 
 module.exports = (req, res) => {
 
-	// rpt bug
-	req.body.args = _.clearArgs(req.body.args);
+    // rpt bug
+    req.body.args = _.clearArgs(req.body.args);
 
-	let { 
-		apiKey, 
-		campaignId,
-		plainText,
-		html,
-		to="to" } = req.body.args;
+    let { 
+        apiKey, 
+        campaignId,
+        plainText,
+        html,
+        to="to" } = req.body.args;
 
-	let r  = {
+    let r  = {
         callback     : "",
         contextWrites: {}
     };
 
-	if(!apiKey || !campaignId || !html) {
-		_.echoBadEnd(r, to, res);
-		return;
-	}
+    if(!apiKey || !campaignId || !html) {
+        _.echoBadEnd(r, to, res);
+        return;
+    }
 
-	//get datacenter
-	let dcarr = apiKey.split('-'),
-		dc    = dcarr[dcarr.length-1] + '.';
+    //get datacenter
+    let dcarr = apiKey.split('-'),
+        dc    = dcarr[dcarr.length-1] + '.';
 
-	let body = {
-		plain_text: plainText,
-		html: html
-	}
+    let body = {
+        plain_text: plainText,
+        html: html
+    }
 
-	let options = {
-		method: 'PUT',
-		url: `https://${dc}api.mailchimp.com/3.0/campaigns/${campaignId}/content`, 
-		body: JSON.stringify(body)
-	}
+    let options = {
+        method: 'PUT',
+        url: `https://${dc}api.mailchimp.com/3.0/campaigns/${campaignId}/content`, 
+        body: JSON.stringify(body)
+    }
 
-	return request(options, (err, response, body) => {
-		if(!err && response.statusCode == 200) {
-    		r.contextWrites[to] = JSON.parse(body);
+    return request(options, (err, response, body) => {
+        if(!err && response.statusCode == 200) {
+            r.contextWrites[to] = JSON.parse(body);
             r.callback = 'success'; 
         } else {
             r.contextWrites[to] = JSON.parse(err || body);
@@ -48,6 +48,6 @@ module.exports = (req, res) => {
         }
 
         res.status(200).send(r);
-	})
-	.auth(null, null, true, apiKey);
+    })
+    .auth(null, null, true, apiKey);
 }

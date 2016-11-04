@@ -3,38 +3,38 @@ const request = require('request');
 
 module.exports = (req, res) => {
 
-	// rpt bug
-	req.body.args = _.clearArgs(req.body.args);
+    // rpt bug
+    req.body.args = _.clearArgs(req.body.args);
 
-	let { 
-		apiKey, 
-		workflowId,
-		to="to" } = req.body.args;
+    let { 
+        apiKey, 
+        workflowId,
+        to="to" } = req.body.args;
 
-	let r  = {
+    let r  = {
         callback     : "",
         contextWrites: {}
     };
 
-	if(!apiKey || !workflowId) {
-		_.echoBadEnd(r, to, res);
-		return;
-	}
+    if(!apiKey || !workflowId) {
+        _.echoBadEnd(r, to, res);
+        return;
+    }
 
-	//get datacenter
-	let dcarr = apiKey.split('-'),
-		dc    = dcarr[dcarr.length-1] + '.';
+    //get datacenter
+    let dcarr = apiKey.split('-'),
+        dc    = dcarr[dcarr.length-1] + '.';
 
-	let options = {
-		url: `https://${dc}api.mailchimp.com/3.0/automations/${workflowId}/emails/`, 
-		qs: { 
-			apikey: apiKey,
-		},
-	}
+    let options = {
+        url: `https://${dc}api.mailchimp.com/3.0/automations/${workflowId}/emails/`, 
+        qs: { 
+            apikey: apiKey,
+        },
+    }
 
-	return request(options, (err, response, body) => {
-		if(!err && response.statusCode == 200) {
-    		r.contextWrites[to] = JSON.parse(body);
+    return request(options, (err, response, body) => {
+        if(!err && response.statusCode == 200) {
+            r.contextWrites[to] = JSON.parse(body);
             r.callback = 'success'; 
         } else {
             r.contextWrites[to] = JSON.parse(err || body);
@@ -42,5 +42,5 @@ module.exports = (req, res) => {
         }
 
         res.status(200).send(r);
-	});
+    });
 }

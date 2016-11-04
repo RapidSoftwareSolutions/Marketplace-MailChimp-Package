@@ -3,49 +3,49 @@ const request = require('request');
 
 module.exports = (req, res) => {
 
-	// rpt bug
-	req.body.args = _.clearArgs(req.body.args);
+    // rpt bug
+    req.body.args = _.clearArgs(req.body.args);
 
-	let { 
-		apiKey, 
-		campaignId,
-		testEmails,
-		sendType,
-		to="to" } = req.body.args;
+    let { 
+        apiKey, 
+        campaignId,
+        testEmails,
+        sendType,
+        to="to" } = req.body.args;
 
-	let r  = {
+    let r  = {
         callback     : "",
         contextWrites: {}
     };
 
     console.log(req.body.args)
 
-	if(!apiKey || !campaignId || !testEmails || !sendType) {
-		_.echoBadEnd(r, to, res);
-		return;
-	}
+    if(!apiKey || !campaignId || !testEmails || !sendType) {
+        _.echoBadEnd(r, to, res);
+        return;
+    }
 
-	testEmails = _.array(testEmails);
+    testEmails = _.array(testEmails);
 
-	//get datacenter
-	let dcarr = apiKey.split('-'),
-		dc    = dcarr[dcarr.length-1] + '.';
+    //get datacenter
+    let dcarr = apiKey.split('-'),
+        dc    = dcarr[dcarr.length-1] + '.';
 
 
-	let body = {
-		test_emails: testEmails,
-		send_type: sendType
-	}
+    let body = {
+        test_emails: testEmails,
+        send_type: sendType
+    }
 
-	let options = {
-		method: 'POST',
-		url: `https://${dc}api.mailchimp.com/3.0/campaigns/${campaignId}/actions/test`, 
-		body: JSON.stringify(body)
-	};
+    let options = {
+        method: 'POST',
+        url: `https://${dc}api.mailchimp.com/3.0/campaigns/${campaignId}/actions/test`, 
+        body: JSON.stringify(body)
+    };
 
-	return request(options, (err, response, body) => {
-		if(!err && (response.statusCode == 204 || response.statusCode == 200)) {
-    		r.contextWrites[to] = 'Success';
+    return request(options, (err, response, body) => {
+        if(!err && (response.statusCode == 204 || response.statusCode == 200)) {
+            r.contextWrites[to] = 'Success';
             r.callback = 'success'; 
         } else {
             r.contextWrites[to] = JSON.parse(err || body);
@@ -53,6 +53,6 @@ module.exports = (req, res) => {
         }
 
         res.status(200).send(r);
-	})
-	.auth(null, null, true, apiKey);
+    })
+    .auth(null, null, true, apiKey);
 }

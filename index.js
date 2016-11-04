@@ -20,9 +20,9 @@ fs.readdirSync('api/').forEach((file) => {
         var type      = file.substring(file.lastIndexOf('.') + 1),
             route     = file.substring(0, file.length - type.length - 1);
 
-	   if(!type == 'js') return;
+       if(!type == 'js') return;
 
-	   app.post(`/api/${PACKAGE_NAME}/${route}`, require(`./api/${file}`));
+       app.post(`/api/${PACKAGE_NAME}/${route}`, require(`./api/${file}`));
     } catch(e) { /*console.log(e);*/ return; }
 });
 

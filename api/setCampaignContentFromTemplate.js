@@ -10,8 +10,7 @@ module.exports = (req, res) => {
 		apiKey, 
 		campaignId,
 		plainText,
-		templateId,
-		templateSections,
+		templateId
 		to="to" } = req.body.args;
 
 	let r  = {
@@ -19,7 +18,7 @@ module.exports = (req, res) => {
         contextWrites: {}
     };
 
-	if(!apiKey || !campaignId || !templateId || !templateSections) {
+	if(!apiKey || !campaignId || !templateId) {
 		_.echoBadEnd(r, to, res);
 		return;
 	}
@@ -28,11 +27,11 @@ module.exports = (req, res) => {
 	let dcarr = apiKey.split('-'),
 		dc    = dcarr[dcarr.length-1] + '.';
 
-	let body = {
+	let body = _.clearArgs({
 		plain_text: plainText,
 		template_sections: templateSections,
 		template_id: templateId
-	}
+	});
 
 	let options = {
 		method: 'PUT',

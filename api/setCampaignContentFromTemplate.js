@@ -11,6 +11,7 @@ module.exports = (req, res) => {
 		campaignId,
 		plainText,
 		templateId,
+		templateSections,
 		to="to" } = req.body.args;
 
 	let r  = {

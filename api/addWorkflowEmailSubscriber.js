@@ -19,7 +19,7 @@ module.exports = (req, res) => {
     };
 
     if(!apiKey || !workflowId || !emailId || !emailAddress) {
-        _.echoBadEnd(r, to, res);
+        _.echoBadEnd(r, to, res, 'apiKey, workflowId, emailId, emailAddress');
         return;
     }
 

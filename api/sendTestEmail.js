@@ -21,7 +21,7 @@ module.exports = (req, res) => {
     console.log(req.body.args)
 
     if(!apiKey || !campaignId || !testEmails || !sendType) {
-        _.echoBadEnd(r, to, res);
+        _.echoBadEnd(r, to, res, 'apiKey, campaignId, testEmails, sendType');
         return;
     }
 

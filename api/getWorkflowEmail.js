@@ -9,6 +9,7 @@ module.exports = (req, res) => {
     let { 
         apiKey, 
         workflowId,
+        emailId,
         to="to" } = req.body.args;
 
     let r  = {
@@ -17,7 +18,7 @@ module.exports = (req, res) => {
     };
 
     if(!apiKey || !workflowId) {
-        _.echoBadEnd(r, to, res);
+        _.echoBadEnd(r, to, res, 'apiKey, workflowId, emailId');
         return;
     }
 
@@ -26,7 +27,7 @@ module.exports = (req, res) => {
         dc    = dcarr[dcarr.length-1] + '.';
 
     let options = {
-        url: `https://${dc}api.mailchimp.com/3.0/automations/${workflowId}/emails`, 
+        url: `https://${dc}api.mailchimp.com/3.0/automations/${workflowId}/emails/${emailId}`, 
         qs: { 
             apikey: apiKey,
         },

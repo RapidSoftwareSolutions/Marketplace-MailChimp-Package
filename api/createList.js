@@ -48,7 +48,8 @@ module.exports = (req, res) => {
         || !campaignDefaultsLanguage
         || !emailTypeOption) 
     {
-        _.echoBadEnd(r, to, res);
+        _.echoBadEnd(r, to, res, 
+            'apiKey, name, contactCompany, contactCountry, contactAddress1, contactCity, contactState, contactCountry, permissionReminder, campaignDefaultsFromEmail, campaignDefaultsLanguage, campaignDefaultsFromName, campaignDefaultsSubject, emailTypeOption');
         return;
     }
 

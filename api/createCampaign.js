@@ -72,7 +72,7 @@ module.exports = (req, res) => {
         || !replyTo 
         || !type) 
     {
-        _.echoBadEnd(r, to, res);
+        _.echoBadEnd(r, to, res, 'apiKey, recipientsListId, subjectLine, fromName, replyTo, type');
         return;
     }
 

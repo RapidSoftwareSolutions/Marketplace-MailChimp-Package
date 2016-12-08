@@ -20,14 +20,20 @@ module.exports = (req, res) => {
     };
 
     try {
-        var membersArr = JSON.parse(members);
+        if(typeof members == 'string') members = JSON.parse(members);
     } catch(e) {
-        _.echoBadEnd(r, to, res);
+        r.callback          = 'error';
+        r.contextWrites[to] = {
+             status_code: 'JSON_VALIDATION',
+             status_msg: 'Syntax error. Incorrect input JSON. Please, check fields with JSON input.'
+        }
+
+        res.status(200).send(r);
         return;
     }
 
-    if(!apiKey || !members || membersArr == '[]') {
-        _.echoBadEnd(r, to, res);
+    if(!apiKey || !members) {
+        _.echoBadEnd(r, to, res, 'apiKey, members');
         return;
     }
 
@@ -39,7 +45,7 @@ module.exports = (req, res) => {
 
     let body = {
         update_existing: updateExisting,
-        members: membersArr
+        members: members
     }
 
     let options = {

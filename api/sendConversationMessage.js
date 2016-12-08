@@ -21,7 +21,7 @@ module.exports = (req, res) => {
     };
 
     if(!apiKey || !conversationId || !fromEmail || !read) {
-        _.echoBadEnd(r, to, res);
+        _.echoBadEnd(r, to, res, 'apiKey, conversationId, fromEmail, read');
         return;
     }
 

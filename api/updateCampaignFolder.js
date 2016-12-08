@@ -18,7 +18,7 @@ module.exports = (req, res) => {
     };
 
     if(!apiKey || !name || !folderId) {
-        _.echoBadEnd(r, to, res);
+        _.echoBadEnd(r, to, res, 'apiKey, name, folderId');
         return;
     }
 

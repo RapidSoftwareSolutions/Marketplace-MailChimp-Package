@@ -19,7 +19,7 @@ module.exports = (req, res) => {
     };
 
     if(!apiKey || !campaignId || !url) {
-        _.echoBadEnd(r, to, res);
+        _.echoBadEnd(r, to, res, 'apiKey, campaignId, url');
         return;
     }
 

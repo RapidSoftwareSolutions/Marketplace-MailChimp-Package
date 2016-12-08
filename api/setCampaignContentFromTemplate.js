@@ -20,7 +20,7 @@ module.exports = (req, res) => {
     };
 
     if(!apiKey || !campaignId || !templateId) {
-        _.echoBadEnd(r, to, res);
+        _.echoBadEnd(r, to, res, 'apiKey, campaignId, templateId');
         return;
     }
 

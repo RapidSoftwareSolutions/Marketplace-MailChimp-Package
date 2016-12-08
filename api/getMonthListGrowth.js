@@ -20,7 +20,7 @@ module.exports = (req, res) => {
     };
 
     if(!apiKey || !listId || !month) {
-        _.echoBadEnd(r, to, res);
+        _.echoBadEnd(r, to, res, 'apiKey, listId, month');
         return;
     }
 

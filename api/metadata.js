@@ -4,6 +4,7 @@ res.status(200).send({
   "tagline": "MailChimp Package",
   "description": "The MailChimp Package can be used to build real time application based on the MailChimp platform.",
   "image": "https://pbs.twimg.com/profile_images/709825689181147136/SdVd6iit.jpg",
+  'keywords': ["API", "analytics", "automation", "database", "email", "emails", "marketing"],
   "repo": "https://github.com/RapidSoftwareSolutions/marketplace-MailChimp-package",
   "accounts": {
     "domain": "mailchimp.com",

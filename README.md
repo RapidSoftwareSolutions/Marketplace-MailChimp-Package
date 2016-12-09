@@ -9,59 +9,9 @@ The MailChimp Package can be used to build real time application based on the Ma
 2. Go to `Extras -> Api Keys` folder.
 3. Click on <kbd>Create A Key</kbd> button and save your apiKey.
 
-## TOC: 
-* [getAutomationsList](#getAutomationsList)
-* [getAutomationInWorkflow](#getAutomationInWorkflow)
-* [pauseAllEmails](#pauseAllEmails)
-* [startAllEmails](#startAllEmails)
-* [getAutomatedEmailsList](#getAutomatedEmailsList)
-* [getWorkflowEmail](#getWorkflowEmail)
-* [pauseAutomatedEmail](#pauseAutomatedEmail)
-* [startAutomatedEmail](#startAutomatedEmail)
-* [addWorkflowEmailSubscriber](#addWorkflowEmailSubscriber)
-* [getEmailSubscriber](#getEmailSubscriber)
-* [removeWorkflowSubscriber](#removeWorkflowSubscriber)
-* [createCampaignFolder](#createCampaignFolder)
-* [getCampaignFolders](#getCampaignFolders)
-* [getCampaignFolder](#getCampaignFolder)
-* [updateCampaignFolder](#updateCampaignFolder)
-* [deleteCampaignFolder](#deleteCampaignFolder)
-* [createCampaign](#createCampaign)
-* [getCampaigns](#getCampaigns)
-* [getCampaign](#getCampaign)
-* [updateCampaign](#updateCampaign)
-* [deleteCampaign](#deleteCampaign)
-* [cancelCampaign](#cancelCampaign)
-* [replicateCampaign](#replicateCampaign)
-* [resumeRSSCampaign](#resumeRSSCampaign)
-* [scheduleCampaign](#scheduleCampaign)
-* [sendCampaign](#sendCampaign)
-* [sendTestEmail](#sendTestEmail)
-* [unscheduleCampaign](#unscheduleCampaign)
-* [getCampaignContent](#getCampaignContent)
-* [getSendChecklist](#getSendChecklist)
-* [getConversationsList](#getConversationsList)
-* [getConversation](#getConversation)
-* [sendConversationMessage](#sendConversationMessage)
-* [getConversationMessages](#getConversationMessages)
-* [getConversationMessage](#getConversationMessage)
-* [createList](#createList)
-* [batchAddMembersToList](#batchAddMembersToList)
-* [getLists](#getLists)
-* [getList](#getList)
-* [deleteList](#deleteList)
-* [updateList](#updateList)
-* [getAbuseReportsList](#getAbuseReportsList)
-* [getAbuseReport](#getAbuseReport)
-* [getListActivity](#getListActivity)
-* [getTopEmailClients](#getTopEmailClients)
-* [setCampaignContentHTML](#setCampaignContentHTML)
-* [setCampaignContentFromURL](#setCampaignContentFromURL)
-* [setCampaignContentFromTemplate](#setCampaignContentFromTemplate)
- 
-<a name="getAutomationsList"/>
+
 ## MailChimp.getAutomationsList
-Method description
+Get a summary of an account’s Automations.
 
 | Field        | Type       | Description
 |--------------|------------|----------
@@ -69,45 +19,40 @@ Method description
 | fields       | String     | A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
 | excludeFields| String     | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
 
-<a name="getAutomationInWorkflow"/>
 ## MailChimp.getAutomationInWorkflow
-Method description
+Get a summary of an individual Automation workflow’s settings and content.
 
 | Field     | Type       | Description
 |-----------|------------|----------
 | apiKey    | credentials| Required: The api key obtained from MailChimp.
 | workflowId| String     | Required: The unique id for the Automation workflow.
 
-<a name="pauseAllEmails"/>
 ## MailChimp.pauseAllEmails
-Method description
+Pause all emails in a specific Automation workflow.
 
 | Field     | Type       | Description
 |-----------|------------|----------
 | apiKey    | credentials| Required: The api key obtained from MailChimp.
 | workflowId| String     | Required: The unique id for the Automation workflow.
 
-<a name="startAllEmails"/>
 ## MailChimp.startAllEmails
-Method description
+Start all emails in an Automation workflow.
 
 | Field     | Type       | Description
 |-----------|------------|----------
 | apiKey    | credentials| Required: The api key obtained from MailChimp.
 | workflowId| String     | Required: The unique id for the Automation workflow.
 
-<a name="getAutomatedEmailsList"/>
 ## MailChimp.getAutomatedEmailsList
-Method description
+Get a list of the emails in an Automation workflow.
 
 | Field     | Type       | Description
 |-----------|------------|----------
 | apiKey    | credentials| Required: The api key obtained from MailChimp.
 | workflowId| String     | Required: The unique id for the Automation workflow.
 
-<a name="getWorkflowEmail"/>
 ## MailChimp.getWorkflowEmail
-Method description
+Get information about an individual Automation workflow email.
 
 | Field     | Type       | Description
 |-----------|------------|----------
@@ -115,9 +60,8 @@ Method description
 | workflowId| String     | Required: Required: The unique id for the Automation workflow.
 | emailId   | String     | Required: The unique id for the Automation workflow email.
 
-<a name="pauseAutomatedEmail"/>
 ## MailChimp.pauseAutomatedEmail
-Method description
+Pause an automated email.
 
 | Field     | Type       | Description
 |-----------|------------|----------
@@ -125,9 +69,8 @@ Method description
 | workflowId| String     | Required: The unique id for the Automation workflow.
 | emailId   | String     | Required: The unique id for the Automation workflow email.
 
-<a name="startAutomatedEmail"/>
 ## MailChimp.startAutomatedEmail
-Method description
+Start an automated email.
 
 | Field     | Type       | Description
 |-----------|------------|----------
@@ -135,86 +78,77 @@ Method description
 | workflowId| String     | Required: The unique id for the Automation workflow.
 | emailId   | String     | Required: The unique id for the Automation workflow email.
 
-<a name="addWorkflowEmailSubscriber"/>
 ## MailChimp.addWorkflowEmailSubscriber
-Method description
+Manually add a subscriber to a workflow, bypassing the default trigger settings
 
-| Field       | Type       | Description
-|-------------|------------|----------
-| apiKey      | credentials| Required: The api key obtained from MailChimp.
-| workflowId  | String     | Required: The unique id for the Automation workflow.
-| emailId     | String     | Required: The unique id for the Automation workflow email.
-| emailAddress| String     | Required: The unique id for the Automation workflow email.
+| Field           | Type       | Description
+|-----------------|------------|----------
+| apiKey          | credentials| Required: The api key obtained from MailChimp.
+| workflowId      | String     | Required: The unique id for the Automation workflow.
+| emailId         | String     | Required: The unique id for the Automation workflow email.
+| emailAddress    | String     | Required: The unique id for the Automation workflow email.
 
-<a name="getEmailSubscriber"/>
 ## MailChimp.getEmailSubscriber
-Method description
+Get information about a specific subscriber in an Automation email queue.
 
-| Field       | Type       | Description
-|-------------|------------|----------
-| apiKey      | credentials| Required: The api key obtained from MailChimp.
-| workflowId  | String     | The unique id for the Automation workflow.
-| emailId     | String     | The unique id for the Automation workflow email.
-| emailAddress| String     | Required: The unique id for the Automation workflow email.
+| Field           | Type       | Description
+|-----------------|------------|----------
+| apiKey          | credentials| Required: The api key obtained from MailChimp.
+| workflowId      | String     | The unique id for the Automation workflow.
+| emailId         | String     | The unique id for the Automation workflow email.
+| emailAddress    | String     | Required: The unique id for the Automation workflow email.
 
-<a name="removeWorkflowSubscriber"/>
 ## MailChimp.removeWorkflowSubscriber
-Method description
+Remove a subscriber from a specific Automation workflow. You can remove a subscriber at any point in an Automation workflow, regardless of how many emails they’ve been sent from that workflow. Once they’re removed, they can never be added back to the same workflow.
 
-| Field       | Type       | Description
-|-------------|------------|----------
-| apiKey      | credentials| Required: The api key obtained from MailChimp.
-| workflowId  | String     | Required: The unique id for the Automation workflow.
-| emailAddress| String     | Required: The list member’s email address.
+| Field           | Type       | Description
+|-----------------|------------|----------
+| apiKey          | credentials| Required: The api key obtained from MailChimp.
+| workflowId      | String     | Required: The unique id for the Automation workflow.
+| emailAddress    | String     | Required: The list member’s email address.
 
-<a name="createCampaignFolder"/>
 ## MailChimp.createCampaignFolder
-Method description
+Create a new campaign folder.
 
-| Field | Type       | Description
-|-------|------------|----------
-| apiKey| credentials| Required: The api key obtained from MailChimp.
-| name  | String     | Required: Name to associate with the folder.
+| Field     | Type       | Description
+|-----------|------------|----------
+| apiKey    | credentials| Required: The api key obtained from MailChimp.
+| name      | String     | Required: Name to associate with the folder.
 
-<a name="getCampaignFolders"/>
 ## MailChimp.getCampaignFolders
-Method description
+Get all folders used to organize campaigns.
 
-| Field | Type       | Description
-|-------|------------|----------
-| apiKey| credentials| Required: The api key obtained from MailChimp.
+| Field     | Type       | Description
+|-----------|------------|----------
+| apiKey    | credentials| Required: The api key obtained from MailChimp.
 
-<a name="getCampaignFolder"/>
 ## MailChimp.getCampaignFolder
-Method description
+Get information about a specific folder used to organize campaigns.
 
-| Field   | Type       | Description
-|---------|------------|----------
-| apiKey  | credentials| Required: The api key obtained from MailChimp.
-| folderId| String     | Required: The api key obtained from MailChimp.
+| Field     | Type       | Description
+|-----------|------------|----------
+| apiKey    | credentials| Required: The api key obtained from MailChimp.
+| folderId  | String     | Required: The api key obtained from MailChimp.
 
-<a name="updateCampaignFolder"/>
 ## MailChimp.updateCampaignFolder
-Method description
+Update a specific folder used to organize campaigns.
 
-| Field   | Type       | Description
-|---------|------------|----------
-| apiKey  | credentials| Required: The api key obtained from MailChimp.
-| folderId| String     | Required: The api key obtained from MailChimp.
-| name    | String     | Required: Name to associate with the folder.
+| Field     | Type       | Description
+|-----------|------------|----------
+| apiKey    | credentials| Required: The api key obtained from MailChimp.
+| folderId  | String     | Required: The api key obtained from MailChimp.
+| name      | String     | Required: Name to associate with the folder.
 
-<a name="deleteCampaignFolder"/>
 ## MailChimp.deleteCampaignFolder
-Method description
+Delete a specific campaign folder, and mark all the campaigns in the folder as ‘unfiled’.
 
-| Field   | Type       | Description
-|---------|------------|----------
-| apiKey  | credentials| Required: The api key obtained from MailChimp.
-| folderId| String     | Required: The api key obtained from MailChimp.
+| Field     | Type       | Description
+|-----------|------------|----------
+| apiKey    | credentials| Required: The api key obtained from MailChimp.
+| folderId  | String     | Required: The api key obtained from MailChimp.
 
-<a name="createCampaign"/>
 ## MailChimp.createCampaign
-Method description
+Create a new MailChimp campaign.
 
 | Field                            | Type       | Description
 |----------------------------------|------------|----------
@@ -271,9 +205,8 @@ Method description
 | socialCardDescription            | String     | A short summary of the campaign to display.
 | socialCardTitle                  | String     | The title for the card. Typically the subject line of the campaign.
 
-<a name="getCampaigns"/>
 ## MailChimp.getCampaigns
-Method description
+Get all campaigns in an account.
 
 | Field           | Type       | Description
 |-----------------|------------|----------
@@ -287,18 +220,16 @@ Method description
 | listId          | String     | The unique id for the list.
 | folderId        | String     | The unique folder id.
 
-<a name="getCampaign"/>
 ## MailChimp.getCampaign
-Method description
+Get information about a specific campaign.
 
 | Field     | Type       | Description
 |-----------|------------|----------
 | apiKey    | credentials| Required: The api key obtained from MailChimp.
 | campaignId| String     | Required: The campaign id.
 
-<a name="updateCampaign"/>
 ## MailChimp.updateCampaign
-Method description
+Update some or all of the settings for a specific campaign.
 
 | Field                            | Type       | Description
 |----------------------------------|------------|----------
@@ -355,45 +286,40 @@ Method description
 | socialCardDescription            | String     | A short summary of the campaign to display.
 | socialCardTitle                  | String     | The title for the card. Typically the subject line of the campaign.
 
-<a name="deleteCampaign"/>
 ## MailChimp.deleteCampaign
-Method description
+Remove a campaign from your MailChimp account.
 
 | Field     | Type       | Description
 |-----------|------------|----------
 | apiKey    | credentials| Required: The api key obtained from MailChimp.
 | campaignId| String     | Required: The unique id for the campaign.
 
-<a name="cancelCampaign"/>
 ## MailChimp.cancelCampaign
-Method description
+Cancel a Regular or Plain-Text Campaign after you send, before all of your recipients receive it.
 
 | Field     | Type       | Description
 |-----------|------------|----------
 | apiKey    | credentials| Required: The api key obtained from MailChimp.
 | campaignId| String     | Required: The unique id for the campaign.
 
-<a name="replicateCampaign"/>
 ## MailChimp.replicateCampaign
-Method description
+Replicate a campaign in saved or send status.
 
 | Field     | Type       | Description
 |-----------|------------|----------
 | apiKey    | credentials| Required: The api key obtained from MailChimp.
 | campaignId| String     | Required: The unique id for the campaign.
 
-<a name="resumeRSSCampaign"/>
 ## MailChimp.resumeRSSCampaign
-Method description
+Resume an RSS-Driven campaign.
 
 | Field     | Type       | Description
 |-----------|------------|----------
 | apiKey    | credentials| Required: The api key obtained from MailChimp.
 | campaignId| String     | Required: The unique id for the campaign.
 
-<a name="scheduleCampaign"/>
 ## MailChimp.scheduleCampaign
-Method description
+Schedule a campaign for delivery.
 
 | Field                  | Type       | Description
 |------------------------|------------|----------
@@ -404,18 +330,16 @@ Method description
 | batchDeliveryBatchDelay| String     | The delay, in minutes, between batches.
 | batchDeliveryBatchCount| String     | The number of batches for the campaign send.
 
-<a name="sendCampaign"/>
 ## MailChimp.sendCampaign
-Method description
+Send a MailChimp campaign. For RSS Campaigns, the campaign will send according to its schedule. All other campaigns will send immediately.
 
 | Field     | Type       | Description
 |-----------|------------|----------
 | apiKey    | credentials| Required: The api key obtained from MailChimp.
 | campaignId| String     | Required: The unique id for the campaign.
 
-<a name="sendTestEmail"/>
 ## MailChimp.sendTestEmail
-Method description
+Send a test email.
 
 | Field     | Type       | Description
 |-----------|------------|----------
@@ -424,156 +348,114 @@ Method description
 | testEmails| String     | Required: The unique id for the campaign.
 | sendType  | String     | Required: The unique id for the campaign.
 
-<a name="unscheduleCampaign"/>
 ## MailChimp.unscheduleCampaign
-Method description
+Unschedule a scheduled campaign that hasn’t started sending.
 
 | Field     | Type       | Description
 |-----------|------------|----------
 | apiKey    | credentials| Required: The api key obtained from MailChimp.
 | campaignId| String     | Required: The unique id for the campaign.
 
-<a name="getCampaignContent"/>
 ## MailChimp.getCampaignContent
-Method description
+Get the the HTML and plain-text content for a campaign.
 
 | Field     | Type       | Description
 |-----------|------------|----------
 | apiKey    | credentials| Required: The api key obtained from MailChimp.
 | campaignId| String     | Required: The unique id for the campaign.
 
-<a name="getSendChecklist"/>
 ## MailChimp.getSendChecklist
-Method description
+Review the send checklist for a campaign, and resolve any issues before sending.
 
 | Field     | Type       | Description
 |-----------|------------|----------
 | apiKey    | credentials| Required: The api key obtained from MailChimp.
 | campaignId| String     | Required: The unique id for the campaign.
 
-<a name="getConversationsList"/>
 ## MailChimp.getConversationsList
-Method description
+Get a list of conversations for the account.
 
-| Field | Type       | Description
-|-------|------------|----------
-| apiKey| credentials| Required: The api key obtained from MailChimp.
+| Field     | Type       | Description
+|-----------|------------|----------
+| apiKey    | credentials| Required: The api key obtained from MailChimp.
 
-<a name="getConversation"/>
 ## MailChimp.getConversation
-Method description
+Get details about an individual conversation.
 
-| Field         | Type       | Description
-|---------------|------------|----------
-| apiKey        | credentials| Required: The api key obtained from MailChimp.
-| conversationId| String     | Required: The unique id for the campaign.
+| Field             | Type       | Description
+|-------------------|------------|----------
+| apiKey            | credentials| Required: The api key obtained from MailChimp.
+| conversationId    | String     | Required: The unique id for the campaign.
 
-<a name="sendConversationMessage"/>
 ## MailChimp.sendConversationMessage
-Method description
+Post a new message to a conversation.
 
-| Field         | Type       | Description
-|---------------|------------|----------
-| apiKey        | credentials| Required: The api key obtained from MailChimp.
-| conversationId| String     | Required: The unique id for the conversation.
-| fromEmail     | String     | Required: A label representing the email of the sender of this message
-| subject       | String     | The subject of this message
-| message       | String     | The plain-text content of the message
-| read          | String     | Required: Whether this message has been marked as read
+| Field             | Type       | Description
+|-------------------|------------|----------
+| apiKey            | credentials| Required: The api key obtained from MailChimp.
+| conversationId    | String     | Required: The unique id for the conversation.
+| fromEmail         | String     | Required: A label representing the email of the sender of this message
+| subject           | String     | The subject of this message
+| message           | String     | The plain-text content of the message
+| read              | String     | Required: Whether this message has been marked as read
 
-<a name="getConversationMessages"/>
 ## MailChimp.getConversationMessages
-Method description
+Get messages from a specific conversation.
 
-| Field          | Type       | Description
-|----------------|------------|----------
-| apiKey         | credentials| Required: The api key obtained from MailChimp.
-| conversationId | String     | Required: The unique id for the campaign.
-| isRead         | String     | Whether a conversation message has been marked as read.
-| beforeTimestamp| String     | Restrict the response to messages created before the set time. We recommend ISO 8601 time format: 2015-10-21T15:41:36+00:00.
-| sinceTimestamp | String     | Restrict the response to messages created after the set time. We recommend ISO 8601 time format: 2015-10-21T15:41:36+00:00.
+| Field             | Type       | Description
+|-------------------|------------|----------
+| apiKey            | credentials| Required: The api key obtained from MailChimp.
+| conversationId    | String     | Required: The unique id for the campaign.
+| isRead            | String     | Whether a conversation message has been marked as read.
+| beforeTimestamp   | String     | Restrict the response to messages created before the set time. We recommend ISO 8601 time format: 2015-10-21T15:41:36+00:00.
+| sinceTimestamp    | String     | Restrict the response to messages created after the set time. We recommend ISO 8601 time format: 2015-10-21T15:41:36+00:00.
 
-<a name="getConversationMessage"/>
 ## MailChimp.getConversationMessage
-Method description
+Get an individual message in a conversation.
 
-| Field         | Type       | Description
-|---------------|------------|----------
-| apiKey        | credentials| Required: The api key obtained from MailChimp.
-| conversationId| String     | Required: The unique id for the campaign.
-| messageId     | String     | Required: Whether a conversation message has been marked as read.
+| Field             | Type       | Description
+|-------------------|------------|----------
+| apiKey            | credentials| Required: The api key obtained from MailChimp.
+| conversationId    | String     | Required: The unique id for the campaign.
+| messageId         | String     | Required: Whether a conversation message has been marked as read.
 
-<a name="createList"/>
 ## MailChimp.createList
-Method description
+Create a new list in your MailChimp account.
 
-| Field                    | Type       | Description
-|--------------------------|------------|----------
-| apiKey                   | credentials| Required: The api key obtained from MailChimp.
-| name                     | String     | Required: The name of the list.
-| contactCompany           | String     | Required: The company name for the list.
-| contactAddress1          | String     | Required: The street address for the list contact.
-| contactAddress2          | String     | The street address for the list contact.
-| contactCity              | String     | Required: Required: The city for the list contact.
-| contactState             | String     | Required: The state for the list contact.
-| contactZip               | String     | The postal or zip code for the list contact.
-| contactCountry           | String     | A two-character ISO3166 country code. Defaults to US if invalid.
-| contactPhone             | String     | The phone number for the list contact.
-| permissionReminder       | String     | Required: The permission reminder for the list.
-| useArchiveBar            | String     | Whether campaigns for this list use the Archive Bar in archives by default.
-| campaignDefaultsFromName | String     | Required: The default from name for campaigns sent to this list.
-| campaignDefaultsFromEmail| String     | Required: The default from email for campaigns sent to this list.
-| campaignDefaultsSubject  | String     | Required: The default subject line for campaigns sent to this list.
-| campaignDefaultsLanguage | String     | Required: The default language for this lists’s forms.
-| notifyOnSubscribe        | String     | The email address to send subscribe notifications to.
-| notifyOnUnsubscribe      | String     | The email address to send unsubscribe notifications to.
-| emailTypeOption          | String     | Required: Whether the list supports multiple formats for emails. When set to true, subscribers can choose whether they want to receive HTML or plain-text emails. When set to false, subscribers will receive HTML emails, with a plain-text alternative backup.
-| visibility               | String     | Whether this list is public or private.
+| Field                       | Type       | Description
+|-----------------------------|------------|----------
+| apiKey                      | credentials| Required: The api key obtained from MailChimp.
+| name                        | String     | Required: The name of the list.
+| contactCompany              | String     | Required: The company name for the list.
+| contactAddress1             | String     | Required: The street address for the list contact.
+| contactAddress2             | String     | The street address for the list contact.
+| contactCity                 | String     | Required: Required: The city for the list contact.
+| contactState                | String     | Required: The state for the list contact.
+| contactZip                  | String     | The postal or zip code for the list contact.
+| contactCountry              | String     | A two-character ISO3166 country code. Defaults to US if invalid.
+| contactPhone                | String     | The phone number for the list contact.
+| permissionReminder          | String     | Required: The permission reminder for the list.
+| useArchiveBar               | String     | Whether campaigns for this list use the Archive Bar in archives by default.
+| campaignDefaultsFromName    | String     | Required: The default from name for campaigns sent to this list.
+| campaignDefaultsFromEmail   | String     | Required: The default from email for campaigns sent to this list.
+| campaignDefaultsSubject     | String     | Required: The default subject line for campaigns sent to this list.
+| campaignDefaultsLanguage    | String     | Required: The default language for this lists’s forms.
+| notifyOnSubscribe           | String     | The email address to send subscribe notifications to.
+| notifyOnUnsubscribe         | String     | The email address to send unsubscribe notifications to.
+| emailTypeOption             | String     | Required: Whether the list supports multiple formats for emails. When set to true, subscribers can choose whether they want to receive HTML or plain-text emails. When set to false, subscribers will receive HTML emails, with a plain-text alternative backup.
+| visibility                  | String     | Whether this list is public or private.
 
-<a name="batchAddMembersToList"/>
 ## MailChimp.batchAddMembersToList
-Method description
+Batch subscribe or unsubscribe list members.
 
-| Field  | Type       | Description
-|--------|------------|----------
-| apiKey | credentials| Required: The api key obtained from MailChimp.
-| listId | String     | Required: The unique id for the list.
-| members| JSON       | Required: An array of objects, each representing an email address and the subscription status for a specific list. Up to 500 members may be added or updated with each API call.
+| Field     | Type       | Description
+|-----------|------------|----------
+| apiKey    | credentials| Required: The api key obtained from MailChimp.
+| listId    | String     | Required: The unique id for the list.
+| members   | JSON       | Required: members.
 
-`members`:
-
-| Field  | Type       | Description
-|--------|------------|----------
-| email_address | String| Email address for a subscriber.
-| email_type | String| Type of email this member asked to get (‘html’ or ‘text’).
-| status | String| Subscriber’s current status. Possible Values: subscribed, unsubscribed, cleaned, pending
-| merge_fields | String| An individual merge var and value for a member.
-| interests | String| The key of this object’s properties is the ID of the interest in question.
-| language | String| If set/detected, the subscriber’s language.
-| vip | Boolean | If set/detected, the subscriber’s language.
-| location | Object | Subscriber location information. Example: {latitude: 50.2, longitude: -21.1 }
-| ip_signup | String | IP address the subscriber signed up from.
-| timestamp_signup | String | The date and time the subscriber signed up for the list.
-| ip_opt | String | The IP address the subscriber used to confirm their opt-in status.
-| timestamp_opt | String | The date and time the subscribe confirmed their opt-in status.
-
-`members` format:
-```JSON
- [{
-	"email_address": "urist.mcvankab@freddiesjokes.com",
-	"status": "subscribed"
-}, {
-	"email_address": "urist.mcvankab+1@freddiesjokes.com",
-	"status": "subscribed"
-}, {
-	"email_address": "urist.mcvankab+2@freddiesjokes.com",
-	"status_if_new": "subscribed"
-}]
-```
-
-<a name="getLists"/>
 ## MailChimp.getLists
-Method description
+Get information about all lists in the account.
 
 | Field                 | Type       | Description
 |-----------------------|------------|----------
@@ -584,92 +466,84 @@ Method description
 | sinceCampaignLastSent | String     | Restrict results to lists created after the last campaign send date.
 | email                 | String     | Restrict results to lists that include a specific subscriber’s email address.
 
-<a name="getList"/>
 ## MailChimp.getList
-Method description
+Get information about a specific list in your MailChimp account.
 
-| Field | Type       | Description
-|-------|------------|----------
-| apiKey| credentials| Required: The api key obtained from MailChimp.
-| listId| String     | Required: The unique id for the list.
+| Field     | Type       | Description
+|-----------|------------|----------
+| apiKey    | credentials| Required: The api key obtained from MailChimp.
+| listId    | String     | Required: The unique id for the list.
 
-<a name="deleteList"/>
 ## MailChimp.deleteList
-Method description
+Delete a list from your MailChimp account. If you delete a list, you’ll lose the list history - including subscriber activity, unsubscribes, complaints, and bounces. You’ll also lose subscribers’ email addresses, unless you exported and backed up your list.
 
-| Field | Type       | Description
-|-------|------------|----------
-| apiKey| credentials| Required: The api key obtained from MailChimp.
-| listId| String     | Required: The unique id for the list.
+| Field     | Type       | Description
+|-----------|------------|----------
+| apiKey    | credentials| Required: The api key obtained from MailChimp.
+| listId    | String     | Required: The unique id for the list.
 
-<a name="updateList"/>
 ## MailChimp.updateList
-Method description
+Update the settings for a specific list.
 
-| Field                    | Type       | Description
-|--------------------------|------------|----------
-| apiKey                   | credentials| Required: The api key obtained from MailChimp.
-| listId                   | String     | Required: List id to update.
-| name                     | String     | Required: The name of the list.
-| contactCompany           | String     | Required: The company name for the list.
-| contactAddress1          | String     | Required: The street address for the list contact.
-| contactAddress2          | String     | The street address for the list contact.
-| contactCity              | String     | The city for the list contact.
-| contactState             | String     | Required: The state for the list contact.
-| contactZip               | String     | The postal or zip code for the list contact.
-| contactCountry           | String     | Required: A two-character ISO3166 country code. Defaults to US if invalid.
-| contactPhone             | String     | The phone number for the list contact.
-| permissionReminder       | String     | Required: The permission reminder for the list.
-| useArchiveBar            | String     | Whether campaigns for this list use the Archive Bar in archives by default.
-| campaignDefaultsFromName | String     | Required: The default from name for campaigns sent to this list.
-| campaignDefaultsFromEmail| String     | Required: The default from email for campaigns sent to this list.
-| campaignDefaultsSubject  | String     | Required: The default subject line for campaigns sent to this list.
-| campaignDefaultsLanguage | String     | Required: The default language for this lists’s forms.
-| notifyOnSubscribe        | String     | The email address to send subscribe notifications to.
-| notifyOnUnsubscribe      | String     | The email address to send unsubscribe notifications to.
-| emailTypeOption          | String     | Required: cat getWhether the list supports multiple formats for emails. When set to true, subscribers can choose whether they want to receive HTML or plain-text emails. When set to false, subscribers will receive HTML emails, with a plain-text alternative backup.
-| visibility               | String     | Whether this list is public or private.
+| Field                       | Type       | Description
+|-----------------------------|------------|----------
+| apiKey                      | credentials| Required: The api key obtained from MailChimp.
+| listId                      | String     | Required: List id to update.
+| name                        | String     | Required: The name of the list.
+| contactCompany              | String     | Required: The company name for the list.
+| contactAddress1             | String     | Required: The street address for the list contact.
+| contactAddress2             | String     | The street address for the list contact.
+| contactCity                 | String     | The city for the list contact.
+| contactState                | String     | Required: The state for the list contact.
+| contactZip                  | String     | The postal or zip code for the list contact.
+| contactCountry              | String     | Required: A two-character ISO3166 country code. Defaults to US if invalid.
+| contactPhone                | String     | The phone number for the list contact.
+| permissionReminder          | String     | Required: The permission reminder for the list.
+| useArchiveBar               | String     | Whether campaigns for this list use the Archive Bar in archives by default.
+| campaignDefaultsFromName    | String     | Required: The default from name for campaigns sent to this list.
+| campaignDefaultsFromEmail   | String     | Required: The default from email for campaigns sent to this list.
+| campaignDefaultsSubject     | String     | Required: The default subject line for campaigns sent to this list.
+| campaignDefaultsLanguage    | String     | Required: The default language for this lists’s forms.
+| notifyOnSubscribe           | String     | The email address to send subscribe notifications to.
+| notifyOnUnsubscribe         | String     | The email address to send unsubscribe notifications to.
+| emailTypeOption             | String     | Required: cat getWhether the list supports multiple formats for emails. When set to true, subscribers can choose whether they want to receive HTML or plain-text emails. When set to false, subscribers will receive HTML emails, with a plain-text alternative backup.
+| visibility                  | String     | Whether this list is public or private.
 
-<a name="getAbuseReportsList"/>
 ## MailChimp.getAbuseReportsList
-Method description
+Get all abuse reports for a specific list.
 
-| Field | Type       | Description
-|-------|------------|----------
-| apiKey| credentials| Required: The api key obtained from MailChimp.
-| listId| String     | Required: The unique id for the list.
+| Field     | Type       | Description
+|-----------|------------|----------
+| apiKey    | credentials| Required: The api key obtained from MailChimp.
+| listId    | String     | Required: The unique id for the list.
 
-<a name="getAbuseReport"/>
 ## MailChimp.getAbuseReport
-Method description
+Get details about a specific abuse report.
 
-| Field   | Type       | Description
-|---------|------------|----------
-| apiKey  | credentials| Required: The api key obtained from MailChimp.
-| listId  | String     | Required: The unique id for the list.
-| reportId| String     | Required: The unique id for the report.
+| Field     | Type       | Description
+|-----------|------------|----------
+| apiKey    | credentials| Required: The api key obtained from MailChimp.
+| listId    | String     | Required: The unique id for the list.
+| reportId  | String     | Required: The unique id for the report.
 
-<a name="getListActivity"/>
 ## MailChimp.getListActivity
-Method description
+Get up to the previous 180 days of daily detailed aggregated activity stats for a list, not including Automation activity.
 
-| Field | Type       | Description
-|-------|------------|----------
-| apiKey| credentials| Required: The api key obtained from MailChimp.
-| listId| String     | Required: The unique id for the list.
+| Field     | Type       | Description
+|-----------|------------|----------
+| apiKey    | credentials| Required: The api key obtained from MailChimp.
+| listId    | String     | Required: The unique id for the list.
 
-<a name="getTopEmailClients"/>
 ## MailChimp.getTopEmailClients
-Method description
+Get a list of the top email clients based on user-agent strings.
 
-| Field | Type       | Description
-|-------|------------|----------
-| apiKey| credentials| Required: The api key obtained from MailChimp.
-| listId| String     | Required: The unique id for the list.
+| Field     | Type       | Description
+|-----------|------------|----------
+| apiKey    | credentials| Required: The api key obtained from MailChimp.
+| listId    | String     | Required: The unique id for the list.
 
-<a name="setCampaignContentHTML"/>
 ## MailChimp.setCampaignContentHTML
-Method description
+Set the content for a campaign with raw HTML content.
 
 | Field     | Type       | Description
 |-----------|------------|----------
@@ -678,9 +552,8 @@ Method description
 | plainText | String     | Optional: The plain-text portion of the campaign. If left unspecified, we’ll generate this automatically.
 | html      | String     | The raw HTML for the campaign.
 
-<a name="setCampaignContentFromURL"/>
 ## MailChimp.setCampaignContentFromURL
-Method description
+Set the content for a campaign from a URL.
 
 | Field     | Type       | Description
 |-----------|------------|----------
@@ -689,9 +562,8 @@ Method description
 | plainText | String     | Optional: The plain-text portion of the campaign. If left unspecified, we’ll generate this automatically.
 | url       | String     | Required: When importing a campaign, the URL where the HTML lives.
 
-<a name="setCampaignContentFromTemplate"/>
 ## MailChimp.setCampaignContentFromTemplate
-Method description
+Set a campaign content using a template.
 
 | Field           | Type       | Description
 |-----------------|------------|----------

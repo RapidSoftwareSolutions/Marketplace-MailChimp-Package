@@ -15,6 +15,7 @@ res.status(200).send({
   "blocks": [
     {
       "name": "getAutomationsList",
+      "description": "Get a summary of an account’s Automations.",
       "args": [
         {
           "name": "apiKey",
@@ -48,6 +49,7 @@ res.status(200).send({
     },
     {
       "name": "getAutomationInWorkflow",
+      "description": "Get a summary of an individual Automation workflow’s settings and content.",
       "args": [
         {
           "name": "apiKey",
@@ -75,6 +77,7 @@ res.status(200).send({
     },
     {
       "name": "pauseAllEmails",
+      "description": "Pause all emails in a specific Automation workflow.",
       "args": [
         {
           "name": "apiKey",
@@ -102,6 +105,7 @@ res.status(200).send({
     },
     {
       "name": "startAllEmails",
+      "description": "Start all emails in an Automation workflow.",
       "args": [
         {
           "name": "apiKey",
@@ -129,6 +133,7 @@ res.status(200).send({
     },
     {
       "name": "getAutomatedEmailsList",
+      "description": "Get a list of the emails in an Automation workflow.",
       "args": [
         {
           "name": "apiKey",
@@ -156,6 +161,7 @@ res.status(200).send({
     },
     {
       "name": "getWorkflowEmail",
+      "description": "Get information about an individual Automation workflow email.",
       "args": [
         {
           "name": "apiKey",
@@ -189,6 +195,7 @@ res.status(200).send({
     },
     {
       "name": "pauseAutomatedEmail",
+      "description": "Pause an automated email.",
       "args": [
         {
           "name": "apiKey",
@@ -222,6 +229,7 @@ res.status(200).send({
     },
     {
       "name": "startAutomatedEmail",
+      "description": "Start an automated email.",
       "args": [
         {
           "name": "apiKey",
@@ -255,6 +263,7 @@ res.status(200).send({
     },
     {
       "name": "addWorkflowEmailSubscriber",
+      "description": "Manually add a subscriber to a workflow, bypassing the default trigger settings",
       "args": [
         {
           "name": "apiKey",
@@ -294,6 +303,7 @@ res.status(200).send({
     },
     {
       "name": "getEmailSubscriber",
+      "description": "Get information about a specific subscriber in an Automation email queue.",
       "args": [
         {
           "name": "apiKey",
@@ -333,6 +343,7 @@ res.status(200).send({
     },
     {
       "name": "removeWorkflowSubscriber",
+      "description": "Remove a subscriber from a specific Automation workflow. You can remove a subscriber at any point in an Automation workflow, regardless of how many emails they’ve been sent from that workflow. Once they’re removed, they can never be added back to the same workflow.",
       "args": [
         {
           "name": "apiKey",
@@ -366,6 +377,7 @@ res.status(200).send({
     },
     {
       "name": "createCampaignFolder",
+      "description": "Create a new campaign folder.",
       "args": [
         {
           "name": "apiKey",
@@ -393,6 +405,7 @@ res.status(200).send({
     },
     {
       "name": "getCampaignFolders",
+      "description": "Get all folders used to organize campaigns.",
       "args": [
         {
           "name": "apiKey",
@@ -414,6 +427,7 @@ res.status(200).send({
     },
     {
       "name": "getCampaignFolder",
+      "description": "Get information about a specific folder used to organize campaigns.",
       "args": [
         {
           "name": "apiKey",
@@ -441,6 +455,7 @@ res.status(200).send({
     },
     {
       "name": "updateCampaignFolder",
+      "description": "Update a specific folder used to organize campaigns.",
       "args": [
         {
           "name": "apiKey",
@@ -474,6 +489,7 @@ res.status(200).send({
     },
     {
       "name": "deleteCampaignFolder",
+      "description": "Delete a specific campaign folder, and mark all the campaigns in the folder as ‘unfiled’.",
       "args": [
         {
           "name": "apiKey",
@@ -501,6 +517,7 @@ res.status(200).send({
     },
     {
       "name": "createCampaign",
+      "description": "Create a new MailChimp campaign.",
       "args": [
         {
           "name": "apiKey",
@@ -828,6 +845,7 @@ res.status(200).send({
     },
     {
       "name": "getCampaigns",
+      "description": "Get all campaigns in an account.",
       "args": [
         {
           "name": "apiKey",
@@ -897,6 +915,7 @@ res.status(200).send({
     },
     {
       "name": "getCampaign",
+      "description": "Get information about a specific campaign.",
       "args": [
         {
           "name": "apiKey",
@@ -924,6 +943,7 @@ res.status(200).send({
     },
     {
       "name": "updateCampaign",
+      "description": "Update some or all of the settings for a specific campaign.",
       "args": [
         {
           "name": "apiKey",
@@ -1251,6 +1271,7 @@ res.status(200).send({
     },
     {
       "name": "deleteCampaign",
+      "description": "Remove a campaign from your MailChimp account.",
       "args": [
         {
           "name": "apiKey",
@@ -1278,6 +1299,7 @@ res.status(200).send({
     },
     {
       "name": "cancelCampaign",
+      "description": "Cancel a Regular or Plain-Text Campaign after you send, before all of your recipients receive it.",
       "args": [
         {
           "name": "apiKey",
@@ -1305,6 +1327,7 @@ res.status(200).send({
     },
     {
       "name": "replicateCampaign",
+      "description": "Replicate a campaign in saved or send status.",
       "args": [
         {
           "name": "apiKey",
@@ -1332,6 +1355,7 @@ res.status(200).send({
     },
     {
       "name": "resumeRSSCampaign",
+      "description": "Resume an RSS-Driven campaign.",
       "args": [
         {
           "name": "apiKey",
@@ -1359,6 +1383,7 @@ res.status(200).send({
     },
     {
       "name": "scheduleCampaign",
+      "description": "Schedule a campaign for delivery.",
       "args": [
         {
           "name": "apiKey",
@@ -1410,6 +1435,7 @@ res.status(200).send({
     },
     {
       "name": "sendCampaign",
+      "description": "Send a MailChimp campaign. For RSS Campaigns, the campaign will send according to its schedule. All other campaigns will send immediately.",
       "args": [
         {
           "name": "apiKey",
@@ -1437,6 +1463,7 @@ res.status(200).send({
     },
     {
       "name": "sendTestEmail",
+      "description": "Send a test email.",
       "args": [
         {
           "name": "apiKey",
@@ -1476,6 +1503,7 @@ res.status(200).send({
     },
     {
       "name": "unscheduleCampaign",
+      "description": "Unschedule a scheduled campaign that hasn’t started sending.",
       "args": [
         {
           "name": "apiKey",
@@ -1503,6 +1531,7 @@ res.status(200).send({
     },
     {
       "name": "getCampaignContent",
+      "description": "Get the the HTML and plain-text content for a campaign.",
       "args": [
         {
           "name": "apiKey",
@@ -1530,6 +1559,7 @@ res.status(200).send({
     },
     {
       "name": "getSendChecklist",
+      "description": "Review the send checklist for a campaign, and resolve any issues before sending.",
       "args": [
         {
           "name": "apiKey",
@@ -1557,6 +1587,7 @@ res.status(200).send({
     },
     {
       "name": "getConversationsList",
+      "description": "Get a list of conversations for the account.",
       "args": [
         {
           "name": "apiKey",
@@ -1578,6 +1609,7 @@ res.status(200).send({
     },
     {
       "name": "getConversation",
+      "description": "Get details about an individual conversation.",
       "args": [
         {
           "name": "apiKey",
@@ -1605,6 +1637,7 @@ res.status(200).send({
     },
     {
       "name": "sendConversationMessage",
+      "description": "Post a new message to a conversation.",
       "args": [
         {
           "name": "apiKey",
@@ -1656,6 +1689,7 @@ res.status(200).send({
     },
     {
       "name": "getConversationMessages",
+      "description": "Get messages from a specific conversation.",
       "args": [
         {
           "name": "apiKey",
@@ -1701,6 +1735,7 @@ res.status(200).send({
     },
     {
       "name": "getConversationMessage",
+      "description": "Get an individual message in a conversation.",
       "args": [
         {
           "name": "apiKey",
@@ -1734,6 +1769,7 @@ res.status(200).send({
     },
     {
       "name": "createList",
+      "description": "Create a new list in your MailChimp account.",
       "args": [
         {
           "name": "apiKey",
@@ -1869,6 +1905,7 @@ res.status(200).send({
     },
     {
       "name": "batchAddMembersToList",
+      "description": "Batch subscribe or unsubscribe list members.",
       "args": [
         {
           "name": "apiKey",
@@ -1902,6 +1939,7 @@ res.status(200).send({
     },
     {
       "name": "getLists",
+      "description": "Get information about all lists in the account.",
       "args": [
         {
           "name": "apiKey",
@@ -1953,6 +1991,7 @@ res.status(200).send({
     },
     {
       "name": "getList",
+      "description": "Get information about a specific list in your MailChimp account.",
       "args": [
         {
           "name": "apiKey",
@@ -1980,6 +2019,7 @@ res.status(200).send({
     },
     {
       "name": "deleteList",
+      "description": "Delete a list from your MailChimp account. If you delete a list, you’ll lose the list history - including subscriber activity, unsubscribes, complaints, and bounces. You’ll also lose subscribers’ email addresses, unless you exported and backed up your list.",
       "args": [
         {
           "name": "apiKey",
@@ -2007,6 +2047,7 @@ res.status(200).send({
     },
     {
       "name": "updateList",
+      "description": "Update the settings for a specific list.",
       "args": [
         {
           "name": "apiKey",
@@ -2148,6 +2189,7 @@ res.status(200).send({
     },
     {
       "name": "getAbuseReportsList",
+      "description": "Get all abuse reports for a specific list.",
       "args": [
         {
           "name": "apiKey",
@@ -2175,6 +2217,7 @@ res.status(200).send({
     },
     {
       "name": "getAbuseReport",
+      "description": "Get details about a specific abuse report.",
       "args": [
         {
           "name": "apiKey",
@@ -2208,6 +2251,7 @@ res.status(200).send({
     },
     {
       "name": "getListActivity",
+      "description": "Get up to the previous 180 days of daily detailed aggregated activity stats for a list, not including Automation activity.",
       "args": [
         {
           "name": "apiKey",
@@ -2235,6 +2279,7 @@ res.status(200).send({
     },
     {
       "name": "getTopEmailClients",
+      "description": "Get a list of the top email clients based on user-agent strings.",
       "args": [
         {
           "name": "apiKey",
@@ -2262,6 +2307,7 @@ res.status(200).send({
     },
     {
       "name": "setCampaignContentHTML",
+      "description": "Set the content for a campaign with raw HTML content.",
       "args": [
         {
           "name": "apiKey",
@@ -2301,6 +2347,7 @@ res.status(200).send({
     },
     {
       "name": "setCampaignContentFromURL",
+      "description": "Set the content for a campaign from a URL.",
       "args": [
         {
           "name": "apiKey",
@@ -2340,6 +2387,7 @@ res.status(200).send({
     },
     {
       "name": "setCampaignContentFromTemplate",
+      "description": "Set a campaign content using a template.",
       "args": [
         {
           "name": "apiKey",

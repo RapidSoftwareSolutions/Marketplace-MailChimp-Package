@@ -23,7 +23,7 @@ fs.readdirSync('api/').forEach((file) => {
        if(!type == 'js') return;
 
        app.post(`/api/${PACKAGE_NAME}/${route}`, require(`./api/${file}`));
-    } catch(e) { console.log(e); return; }
+    } catch(e) { return; }
 });
 
 /** START LISTENING **/

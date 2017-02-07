@@ -1,3 +1,5 @@
+[![](https://scdn.rapidapi.com/RapidAPI_banner.png)](https://rapidapi.com/package/MailChimp/functions?utm_source=RapidAPIGitHub_MailChimpFunctions&utm_medium=button&utm_content=RapidAPI_GitHub)
+
 # MailChimp Package
 The MailChimp Package can be used to build real time application based on the MailChimp platform.
 * Domain: mailchimp.com

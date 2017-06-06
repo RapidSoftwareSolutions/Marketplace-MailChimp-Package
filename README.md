@@ -11,6 +11,14 @@ The MailChimp Package can be used to build real time application based on the Ma
 2. Go to `Extras -> Api Keys` folder.
 3. Click on <kbd>Create A Key</kbd> button and save your apiKey.
 
+## Custom datatypes:
+|Datatype|Description|Example
+|--------|-----------|----------
+|Datepicker|String which includes date and time|```2016-05-28 00:00:00```
+|Map|String which includes latitude and longitude coma separated|```50.37, 26.56```
+|List|Simple array|```["123", "sample"]```
+|Select|String with predefined values|```sample```
+|Array|Array of objects|```[{"Second name":"123","Age":"12","Photo":"sdf","Draft":"sdfsdf"},{"name":"adi","Second name":"bla","Age":"4","Photo":"asfserwe","Draft":"sdfsdf"}] ```
 
 ## MailChimp.getAutomationsList
 Get a summary of an account’s Automations.
@@ -170,11 +178,11 @@ Create a new MailChimp campaign.
 | autoTweet                        | String     | Automatically tweet a link to the campaign archive page when the campaign is sent.
 | autoFbPost                       | String     | An comma separated string of Facebook page ids to auto-post to.
 | fbComments                       | String     | Allows Facebook comments on the campaign (also force-enables the Campaign Archive toolbar). Defaults to `true`.
-| variateSettingsWinnerCriteria    | String     | The combination that performs the best. This may be determined automatically by click rate, open rate, or total revenue—or you may choose manually based on the reporting data you find the most valuable. For Multivariate Campaigns testing send_time, winner_critera is ignored. For Multivariate Campaigns with ‘manual’ as the winner_citeria, the winner must be chosen in the MailChimp web application. Possible Values: `opens`, `clicks`, `manual`, `total_revenue`
+| variateSettingsWinnerCriteria    | Select     | The combination that performs the best. This may be determined automatically by click rate, open rate, or total revenue—or you may choose manually based on the reporting data you find the most valuable. For Multivariate Campaigns testing send_time, winner_critera is ignored. For Multivariate Campaigns with ‘manual’ as the winner_citeria, the winner must be chosen in the MailChimp web application. Possible Values: `opens`, `clicks`, `manual`, `total_revenue`
 | variateSettingsWaitTime          | Number     | The number of minutes to wait before choosing the winning campaign. The value of wait_time must be greater than 0 and in whole hours, specified in minutes.
 | variateSettingsTestSize          | Number     | The percentage of recipients to send the test combinations to, must be a value between 10 and 100.
 | variateSettingsSubjectLines      | String     | The possible subject lines to test. If no subject lines are provided, settings.subject_line will be used.
-| variateSettingsSendTimes         | String     | The possible send times to test. The times provided should be in the format YYYY-MM-DD HH:MM:SS. If send_times are provided to test, the test_size will be set to 100% and winner_criteria will be ignored.
+| variateSettingsSendTimes         | DatePicker     | The possible send times to test. The times provided should be in the format YYYY-MM-DD HH:MM:SS. If send_times are provided to test, the test_size will be set to 100% and winner_criteria will be ignored.
 | variateSettingsFromNames         | String     | The possible from names. The number of from_names provided must match the number of reply_to_addresses. If no from_names are provided, settings.from_name will be used.
 | replyToAddresses                 | String     | The possible reply-to addresses. The number of reply_to_addresses provided must match the number of from_names. If no reply_to_addresses are provided, settings.reply_to will be used.
 | trackingOpens                    | String     | Whether to track opens. Defaults to true. Cannot be set to false for variate campaigns.
@@ -215,10 +223,10 @@ Get all campaigns in an account.
 | apiKey          | credentials| Required: The api key obtained from MailChimp.
 | type            | String     | The campaign type.
 | status          | String     | The status of the campaign.
-| beforeSendTime  | String     | Restrict the response to campaigns sent before the set time. We recommend ISO 8601 time format: 2015-10-21T15:41:36+00:00.
-| sinceSendTime   | String     | Restrict the response to campaigns sent after the set time. We recommend ISO 8601 time format: 2015-10-21T15:41:36+00:00.
-| beforeCreateTime| String     | Restrict the response to campaigns created before the set time. We recommend ISO 8601 time format: 2015-10-21T15:41:36+00:00.
-| sinceCreateTime | String     | Restrict the response to campaigns created after the set time. We recommend ISO 8601 time format: 2015-10-21T15:41:36+00:00.
+| beforeSendTime  | DatePicker     | Restrict the response to campaigns sent before the set time. We recommend ISO 8601 time format: 2015-10-21T15:41:36+00:00.
+| sinceSendTime   | DatePicker     | Restrict the response to campaigns sent after the set time. We recommend ISO 8601 time format: 2015-10-21T15:41:36+00:00.
+| beforeCreateTime| DatePicker     | Restrict the response to campaigns created before the set time. We recommend ISO 8601 time format: 2015-10-21T15:41:36+00:00.
+| sinceCreateTime | DatePicker     | Restrict the response to campaigns created after the set time. We recommend ISO 8601 time format: 2015-10-21T15:41:36+00:00.
 | listId          | String     | The unique id for the list.
 | folderId        | String     | The unique folder id.
 
@@ -255,7 +263,7 @@ Update some or all of the settings for a specific campaign.
 | variateSettingsWaitTime          | Number     | The number of minutes to wait before choosing the winning campaign. The value of wait_time must be greater than 0 and in whole hours, specified in minutes.
 | variateSettingsTestSize          | Number     | The percentage of recipients to send the test combinations to, must be a value between 10 and 100.
 | variateSettingsSubjectLines      | String     | The possible subject lines to test. If no subject lines are provided, settings.subject_line will be used.
-| variateSettingsSendTimes         | String     | The possible send times to test. The times provided should be in the format YYYY-MM-DD HH:MM:SS. If send_times are provided to test, the test_size will be set to 100% and winner_criteria will be ignored.
+| variateSettingsSendTimes         | DatePicker     | The possible send times to test. The times provided should be in the format YYYY-MM-DD HH:MM:SS. If send_times are provided to test, the test_size will be set to 100% and winner_criteria will be ignored.
 | variateSettingsFromNames         | String     | The possible from names. The number of from_names provided must match the number of reply_to_addresses. If no from_names are provided, settings.from_name will be used.
 | replyToAddresses                 | String     | The possible reply-to addresses. The number of reply_to_addresses provided must match the number of from_names. If no reply_to_addresses are provided, settings.reply_to will be used.
 | trackingOpens                    | String     | Whether to track opens. Defaults to true. Cannot be set to false for variate campaigns.
@@ -409,8 +417,8 @@ Get messages from a specific conversation.
 | apiKey            | credentials| Required: The api key obtained from MailChimp.
 | conversationId    | String     | Required: The unique id for the campaign.
 | isRead            | String     | Whether a conversation message has been marked as read.
-| beforeTimestamp   | String     | Restrict the response to messages created before the set time. We recommend ISO 8601 time format: 2015-10-21T15:41:36+00:00.
-| sinceTimestamp    | String     | Restrict the response to messages created after the set time. We recommend ISO 8601 time format: 2015-10-21T15:41:36+00:00.
+| beforeTimestamp   | DatePicker     | Restrict the response to messages created before the set time. We recommend ISO 8601 time format: 2015-10-21T15:41:36+00:00.
+| sinceTimestamp    | DatePicker     | Restrict the response to messages created after the set time. We recommend ISO 8601 time format: 2015-10-21T15:41:36+00:00.
 
 ## MailChimp.getConversationMessage
 Get an individual message in a conversation.

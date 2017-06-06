@@ -617,7 +617,8 @@ res.status(200).send({
         },
         {
           "name": "variateSettingsWinnerCriteria",
-          "type": "String",
+          "type": "Select",
+          "options": ["opens","clicks","manual","total_revenue"],
           "info": "The combination that performs the best. This may be determined automatically by click rate, open rate, or total revenue—or you may choose manually based on the reporting data you find the most valuable. For Multivariate Campaigns testing send_time, winner_critera is ignored. For Multivariate Campaigns with ‘manual’ as the winner_citeria, the winner must be chosen in the MailChimp web application. Possible Values: `opens`, `clicks`, `manual`, `total_revenue`",
           "required": false
         },
@@ -641,7 +642,7 @@ res.status(200).send({
         },
         {
           "name": "variateSettingsSendTimes",
-          "type": "String",
+          "type": "DatePicker",
           "info": "The possible send times to test. The times provided should be in the format YYYY-MM-DD HH:MM:SS. If send_times are provided to test, the test_size will be set to 100% and winner_criteria will be ignored.",
           "required": false
         },
@@ -867,25 +868,25 @@ res.status(200).send({
         },
         {
           "name": "beforeSendTime",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Restrict the response to campaigns sent before the set time. We recommend ISO 8601 time format: 2015-10-21T15:41:36+00:00.",
           "required": false
         },
         {
           "name": "sinceSendTime",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Restrict the response to campaigns sent after the set time. We recommend ISO 8601 time format: 2015-10-21T15:41:36+00:00.",
           "required": false
         },
         {
           "name": "beforeCreateTime",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Restrict the response to campaigns created before the set time. We recommend ISO 8601 time format: 2015-10-21T15:41:36+00:00.",
           "required": false
         },
         {
           "name": "sinceCreateTime",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Restrict the response to campaigns created after the set time. We recommend ISO 8601 time format: 2015-10-21T15:41:36+00:00.",
           "required": false
         },
@@ -1043,7 +1044,8 @@ res.status(200).send({
         },
         {
           "name": "variateSettingsWinnerCriteria",
-          "type": "String",
+          "type": "Select",
+          "options": ["opens","clicks","manual","total_revenue"],
           "info": "The combination that performs the best. This may be determined automatically by click rate, open rate, or total revenue—or you may choose manually based on the reporting data you find the most valuable. For Multivariate Campaigns testing send_time, winner_critera is ignored. For Multivariate Campaigns with ‘manual’ as the winner_citeria, the winner must be chosen in the MailChimp web application. Possible Values: `opens`, `clicks`, `manual`, `total_revenue`",
           "required": false
         },
@@ -1067,7 +1069,7 @@ res.status(200).send({
         },
         {
           "name": "variateSettingsSendTimes",
-          "type": "String",
+          "type": "DatePicker",
           "info": "The possible send times to test. The times provided should be in the format YYYY-MM-DD HH:MM:SS. If send_times are provided to test, the test_size will be set to 100% and winner_criteria will be ignored.",
           "required": false
         },
@@ -1711,13 +1713,13 @@ res.status(200).send({
         },
         {
           "name": "beforeTimestamp",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Restrict the response to messages created before the set time. We recommend ISO 8601 time format: 2015-10-21T15:41:36+00:00.",
           "required": false
         },
         {
           "name": "sinceTimestamp",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Restrict the response to messages created after the set time. We recommend ISO 8601 time format: 2015-10-21T15:41:36+00:00.",
           "required": false
         }

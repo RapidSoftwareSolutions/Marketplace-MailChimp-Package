@@ -82,7 +82,7 @@ module.exports = (req, res) => {
 
 
     autoFbPost                      = _.array(autoFbPost);
-    variateSettingssubjectLines     = _.array(variateSettingsSendTimes);
+    variateSettingssubjectLines     = _.array(variateSettingssubjectLines);
     variateSettingsSendTimes        = _.array(variateSettingsSendTimes);
     variateSettingsFromNames        = _.array(variateSettingsFromNames);
     variateSettingsReplyToAddresses = _.array(variateSettingsReplyToAddresses);

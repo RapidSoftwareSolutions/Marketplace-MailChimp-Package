@@ -1,3 +1,4 @@
 node_modules
 api/_*
 test
+.idea

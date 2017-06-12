@@ -355,8 +355,8 @@ Send a test email.
 |-----------|------------|----------
 | apiKey    | credentials| Required: The api key obtained from MailChimp.
 | campaignId| String     | Required: The unique id for the campaign.
-| testEmails| String     | Required: The unique id for the campaign.
-| sendType  | String     | Required: The unique id for the campaign.
+| testEmails| String     | Required: Required: Email addresses to send the test email to.
+| sendType  | String     | Required: Required: The type of test email to send. ```html``` or ```plaintext```.
 
 ## MailChimp.unscheduleCampaign
 Unschedule a scheduled campaign that hasn’t started sending.

@@ -1482,13 +1482,13 @@ res.status(200).send({
         {
           "name": "testEmails",
           "type": "String",
-          "info": "Required: The unique id for the campaign.",
+          "info": "Required: Email addresses to send the test email to.",
           "required": true
         },
         {
           "name": "sendType",
           "type": "String",
-          "info": "Required: The unique id for the campaign.",
+          "info": "Required: The type of test email to send. html or plaintext",
           "required": true
         }
       ],

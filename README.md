@@ -6,10 +6,10 @@ The MailChimp Package can be used to build real time application based on the Ma
 * Credentials: apiKey
 
 ## How to get credentials: 
-0. Create MailChimp account.
-1. Go to account folder.
-2. Go to `Extras -> Api Keys` folder.
-3. Click on <kbd>Create A Key</kbd> button and save your apiKey.
+1. Create MailChimp account.
+2. Within the account dropdown menu, select 'Account'
+3. Go to `Extras -> Api Keys` folder.
+4. Click on <kbd>Create A Key</kbd> button and save your apiKey.
 
 ## Custom datatypes:
 |Datatype|Description|Example

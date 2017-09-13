@@ -14,9 +14,9 @@ res.status(200).send({
   },
   "steps": [
     "Create MailChimp account",
-    "Go to account folder",
-    "Go to Extras -> API Keys folder",
-    "Click on 'Create A Key button' and save your apiKey"
+    "Within the account dropdown menu, select 'Account'",
+    "Go to Extras -> API Keys",
+    "Click on 'Create A Key' button and save your apiKey"
   ],
   "blocks": [
     {
